@@ -153,6 +153,13 @@ div.contact-page div.contact-methods h4 a:hover {
 	opacity: 1;
 }
 
+/* SKILL PAGE */
+h2.skill-title {}
+h2.skill-title i.fa {
+	text-align: center;
+	width: 45px;
+}
+
 /** GLOBAL RESPONSIVE STYLES **/
 @media (max-width: 992px) {
 	div.about-page img.avatar {

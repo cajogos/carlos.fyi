@@ -3,7 +3,7 @@
 <span class="nav-header">Me, Myself and I</span>
 <a class="nav-link" href="/" title="Find out more about who this Carlos Ferreira fellow is.">Who I am</a>
 <a class="nav-link" href="/contact" title="Contact Carlos Ferreira web developer from London.">Contact Me</a>
-<a class="nav-link" href="#skills" title=""><del>My skills</del></a>
+<a class="nav-link" href="/skills" title="Check out the skills of Carlos Ferreira.">My Skills</a>
 <a class="nav-link" href="#resume" title=""><del>My resume</del></a>
 <a class="nav-link" href="#blog" title=""><del>Blog</del></a>
 

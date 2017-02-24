@@ -9,6 +9,7 @@ $router = new AltoRouter();
 // map($method, $route, $target, $name = null)
 $router->map('GET', '/', 'handleIndexPage', 'index');
 $router->map('GET', '/contact', 'handleContactPage', 'contact');
+$router->map('GET', '/skills', 'handleSkillsPage', 'skills');
 
 handleRouting($router);
 

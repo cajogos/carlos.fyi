@@ -5,8 +5,8 @@
 {block name=body}
 
 <div class="skills-page">
-	<h1 class="text-center"><i style="color:#F55;text-shadow:3px 3px 0 #EEE;font-weight:bold;" class="fa fa-superpowers fa-spin"></i> My Super Powers <i style="color:#F55;text-shadow:3px 3px 0 #EEE;font-weight:bold;" class="fa fa-superpowers fa-spin"></i></h1>
-	<p class="text-center">Might sound like I have a bit of an ego... But we can not deny that coding is the closest thing we have to superpowers!</p>
+	<h1 class="text-center"><i style="color:#F55;text-shadow:3px 3px 0 #EEE;font-weight:bold;" class="fa fa-superpowers fa-spin"></i>&nbsp;&nbsp;My Super Powers&nbsp;&nbsp;<i style="color:#F55;text-shadow:3px 3px 0 #EEE;font-weight:bold;" class="fa fa-superpowers fa-spin"></i></h1>
+	<p class="text-center">Might sound like I have a bit of an ego... <del><em>I do</em></del> But we can not deny that coding is the closest thing we have to superpowers!</p>
 	<div class="row">
 		<div class="col-sm-6">
 			<h2 class="skill-title"><i class="fa fa-graduation-cap"></i> Teach &amp; Learn</h2>
@@ -51,7 +51,6 @@
 			<p>There is a reason as to why you ended up on this page.</p>
 		</div>
 	</div>
-</div>
 </div>
 
 {/block}

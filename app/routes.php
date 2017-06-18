@@ -10,5 +10,6 @@ $router->map('GET', '/', 'handleIndexPage', 'index');
 $router->map('GET', '/contact', 'handleContactPage', 'contact');
 $router->map('GET', '/skills', 'handleSkillsPage', 'skills');
 $router->map('GET', '/timeline', 'handleTimelinePage', 'timeline');
+$router->map('GET', '/bitcoin', 'handleBitcoinPage', 'bitcoin');
 
 handleRouting($router);

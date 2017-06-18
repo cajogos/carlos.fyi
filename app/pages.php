@@ -120,7 +120,7 @@ function handleBitcoinPage()
 function handle404Page()
 {
     header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
-    $tpl = Template::create('404 - splash . tpl');
+    $tpl = Template::create('404-splash.tpl');
     $tpl->assign('page_title', '404 Not Found - Carlos Ferreira - All Things Developer');
     $tpl->assign('title', '404 - Not Found :(');
     $tpl->assign('subtitle', 'Oops!Looks like whatever you were looking for can not be found... Please try again later . You will be redirected in 10 seconds...');

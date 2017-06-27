@@ -2,7 +2,8 @@
 
 class NiceHashAPI
 {
-    const NICEHASH_WALLET_HASH = '1LwgVb4CNqhG7hTuyhynftsU9NxSdSFutJ';
+//	const NICEHASH_WALLET_HASH = '1LwgVb4CNqhG7hTuyhynftsU9NxSdSFutJ';
+	const NICEHASH_WALLET_HASH = '36uTBc7nkxnCF2Mq9etQkLCD8GSYqmSYE9';
 
     private static $instance = null;
 

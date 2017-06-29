@@ -10,14 +10,14 @@ class NiceHashAPI
     private $algo_info = null;
     private $current_stats = null;
     private $current_workers = null;
-    private $extended_stats = null;
+    private $balance_info = null;
 
     private function __construct()
     {
         $this->load_algo_info();
         $this->load_current_stats();
+		$this->load_balance_info();
         $this->load_current_workers();
-        $this->load_extended_stats();
     }
 
     public static function get()
@@ -39,10 +39,20 @@ class NiceHashAPI
         return $this->current_workers;
     }
 
-    public function getCurrentTotalBalance()
+    public function getMiningBalance()
     {
-        return $this->current_stats['total_balance'];
+        return $this->current_stats['mining_balance'];
     }
+
+    public function getWalletConfirmedBalance()
+	{
+		return $this->balance_info['confirmed'];
+	}
+
+	public function getWalletPendingBalance()
+	{
+		return $this->balance_info['pending'];
+	}
 
     private function load_current_stats()
     {
@@ -52,7 +62,7 @@ class NiceHashAPI
         if (is_null($current_stats))
         {
             $current_stats = array();
-            $current_stats['total_balance'] = 0;
+            $current_stats['mining_balance'] = 0;
             $current_stats['algos'] = array();
 
             $client = new GuzzleHttp\Client();
@@ -65,7 +75,7 @@ class NiceHashAPI
             {
                 $cur_stat = array();
                 $cur_stat['balance'] = (float)$stat->balance;
-                $current_stats['total_balance'] += $cur_stat['balance'];
+                $current_stats['mining_balance'] += $cur_stat['balance'];
                 $cur_stat['speed'] = array(
                     'rejected' => (float)$stat->rejected_speed,
                     'accepted' => (float)$stat->accepted_speed
@@ -80,6 +90,33 @@ class NiceHashAPI
         }
         $this->current_stats = $current_stats;
     }
+
+    private function load_balance_info()
+	{
+		$uri = 'https://api.nicehash.com/api?method=balance&id=191317&key=1289dd4a-637d-4e3d-bc36-0425dda230ee';
+		$cache_key = 'nicehash_balance_info_v2906';
+		$balance_info = TempCache::get($cache_key);
+		if (is_null($balance_info))
+		{
+			$client = new GuzzleHttp\Client();
+			$response = $client->get($uri);
+			$body = (string)$response->getBody();
+			$json_info = json_decode($body);
+
+			$result = $json_info->result;
+
+			$balance_info = array(
+				'pending' => $result->balance_pending,
+				'confirmed' => $result->balance_confirmed
+			);
+
+			if (!empty($balance_info))
+			{
+				TempCache::put($cache_key, $balance_info, 300);
+			}
+		}
+		$this->balance_info = $balance_info;
+	}
 
     private function load_current_workers()
     {
@@ -126,11 +163,6 @@ class NiceHashAPI
             }
         }
         $this->current_workers = $current_workers;
-    }
-
-    private function load_extended_stats()
-    {
-        // TODO
     }
 
     private function load_algo_info()

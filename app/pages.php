@@ -52,8 +52,8 @@ function handleBitcoinPage()
     $bitcoin_api = BitcoinAPI::get();
     $tpl->assign('bitcoin_hash', BitcoinAPI::HASH_COINBASE);
 
-    $tpl->assign('balance', $bitcoin_api->getWalletBalance());
-    $tpl->assign('balance_usd', $bitcoin_api->getBalanceInUSD());
+//    $tpl->assign('balance', $bitcoin_api->getWalletBalance());
+//    $tpl->assign('balance_usd', $bitcoin_api->getBalanceInUSD());
 
     // Monetary Values
     $usd_value = $bitcoin_api->getUSDValue();
@@ -67,7 +67,9 @@ function handleBitcoinPage()
     $nicehash_api = NiceHashAPI::get();
 
     $tpl->assign('nicehash_key', NiceHashAPI::NICEHASH_WALLET_HASH);
-    $tpl->assign('nicehash_balance', $nicehash_api->getCurrentTotalBalance());
+	$tpl->assign('nicehash_wallet_confirmed', $nicehash_api->getWalletConfirmedBalance());
+	$tpl->assign('nicehash_wallet_pending', $nicehash_api->getWalletPendingBalance());
+    $tpl->assign('nicehash_mining_balance', $nicehash_api->getMiningBalance());
 
     // Current NiceHash stats
     $cur_stats = $nicehash_api->getCurrentStats()['algos'];
@@ -101,7 +103,10 @@ function handleBitcoinPage()
             $workers_html .= '<p><strong>Algorithm: </strong>' . $nicehash_api->getAlgoNameById($algo);
             $workers_html .= '<br /><strong>Time: </strong>' . $results['minutes_connected'] . ' mins';
             $workers_html .= '<br /><strong>Difficulty: </strong>' . $results['difficulty'];
-            $workers_html .= '<br /><strong>Speed: </strong>' . $results['speed']->a;
+            if (isset($results['speed']->a))
+			{
+				$workers_html .= '<br /><strong>Speed: </strong>' . $results['speed']->a;
+			}
             $workers_html .= '<br /><strong>Location: </strong>' . $results['location'];
             $workers_html .= '</p><hr />';
         }

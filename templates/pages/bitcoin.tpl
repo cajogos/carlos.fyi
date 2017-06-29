@@ -8,9 +8,7 @@
             <div class="col-sm-4">
                 <h1>My Bitcoins <i class="fa fa-bitcoin"></i></h1>
                 <p><a href="bitcoin:{$bitcoin_hash}">{$bitcoin_hash}</a></p>
-                <p><strong>Balance: </strong> {$balance|string_format:"%.8f"} BTC (USD
-                    ${$balance_usd|string_format:"%.2f"})
-                </p>
+                <p class="small">I accept donations :)</p>
             </div>
             <div class="col-sm-8">
                 <h2>Bitcoin Value</h2>
@@ -31,7 +29,9 @@
         </div>
 
         <h2>NiceHash Stats</h2>
-        <p><strong>Balance: </strong>{$nicehash_balance|string_format:"%.8f"} BTC</p>
+        <p><strong>Wallet Confirmed: </strong>{$nicehash_wallet_confirmed|string_format:"%.8f"} BTC |
+            <strong>Wallet Pending: </strong>{$nicehash_wallet_pending|string_format:"%.8f"} BTC |
+            <strong>Mining Balance: </strong>{$nicehash_mining_balance|string_format:"%.8f"} BTC</p>
         <div class="panel panel-danger">
             <div class="panel-heading">
                 <h3 class="panel-title">Breakdown by Algorithm</h3>

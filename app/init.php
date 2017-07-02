@@ -1,7 +1,8 @@
 <?php
 
-// Enable (1) Disable (0) development mode
-define('DEV_MODE', 1); 
+// Determine if in Development mode (localhost)
+$localhost = (strstr($_SERVER['HTTP_HOST'], 'localhost') !== false);
+define('DEV_MODE', $localhost);
 if (DEV_MODE)
 {
 	ini_set('display_errors', DEV_MODE);
@@ -21,5 +22,32 @@ require $_SERVER['DOCUMENT_ROOT'] . '../../vendor/autoload.php';
 // Load custom classes
 spl_autoload_register(function ($class_name)
 {
-	include $_SERVER['DOCUMENT_ROOT'] . '../../classes/' . $class_name . '.php';
+	// Check if Class
+	$location = $_SERVER['DOCUMENT_ROOT'] . '/../classes/' . $class_name . '.php';
+	if (file_exists($location))
+	{
+		require_once $location;
+	}
+	else
+	{
+		// Check if Controller
+		$location = $_SERVER['DOCUMENT_ROOT'] . '/../controllers/' . $class_name . '.php';
+		if (file_exists($location))
+		{
+			require_once $location;
+		}
+		else
+		{
+			// Check if Element
+			$location = $_SERVER['DOCUMENT_ROOT'] . '/../elements/' . $class_name . '.php';
+			if (file_exists($location))
+			{
+				require_once $location;
+			}
+			else
+			{
+				throw new Exception('Could not find class: ' . $class_name);
+			}
+		}
+	}
 });

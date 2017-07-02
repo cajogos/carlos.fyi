@@ -12,6 +12,7 @@
 
 	<h2>2017</h2>
 	<ul>
+		<li><strong>Jun:</strong> Got involved with cryptocurrencies, especially <a href="/bitcoin">Bitcoin</a>.</li>
 		<li><strong>Apr:</strong> Officially released my own PHP Framework called <a href="https://biscuit.link" target="_blank">Biscuit Link</a>.</li>
 		<li><strong>Jan:</strong> Launched this website and the new <a href="/">carlos.fyi</a> brand.</li>
 		<li><strong>Jan:</strong> Became head of development for the new <a href="https://coderdojo.london" target="_blank">CoderDojo London</a> website.</li>
@@ -27,7 +28,7 @@
 	<ul>
 		<li><strong>Oct:</strong> Now Web Application Developer at <a href="http://advfn.com" target="_blank">ADVFN</a>.</li>
 		<li><strong>Jul:</strong> Graduated, with first class, BSc (Hons) Computer Science from University of Greenwich in London.</li>
-		<li><strong>Feb:</strong> First junior developer role at <a href="http://advfn.com" target="_blank">ADVFN</a>.</li>
+		<li><strong>Feb:</strong> Junior developer role at <a href="http://advfn.com" target="_blank">ADVFN</a>.</li>
 	</ul>
 	<hr />
 	<h2>2014</h2>

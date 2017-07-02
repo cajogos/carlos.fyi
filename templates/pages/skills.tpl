@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-sm-6">
 			<h2 class="skill-title"><i class="fa fa-graduation-cap"></i> Teach &amp; Learn</h2>
-			<p>One thing I believe in is that to get better at what you do when you teach it.</p>
+			<p>One thing I believe in is that you get better at what you do when you teach it.</p>
 			<p>This is why I have dedicated myself to teaching and mentoring. I have been a lead mentor of <a href="https://coderdojo.london" target="_blank">CoderDojo in London</a> for over 3 and half years.</p>
 			<p>I have also many years of experience in mentoring Computer Science to university students, which I find it helps me stay up-to-date with what is being taught, and gives me a chance to give my knowledge and experience to my mentees.</p>
 		</div>

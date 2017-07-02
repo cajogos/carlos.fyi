@@ -52,9 +52,6 @@ function handleBitcoinPage()
     $bitcoin_api = BitcoinAPI::get();
     $tpl->assign('bitcoin_hash', BitcoinAPI::HASH_COINBASE);
 
-//    $tpl->assign('balance', $bitcoin_api->getWalletBalance());
-//    $tpl->assign('balance_usd', $bitcoin_api->getBalanceInUSD());
-
     // Monetary Values
     $usd_value = $bitcoin_api->getUSDValue();
     $eur_value = $bitcoin_api->getEURValue();

@@ -33,6 +33,7 @@
 			<p>I have my own <a href="https://biscuit.link" title="Biscuit Link - PHP Framework for Everyone" target="_blank">PHP framework</a>, deeply inspired in my love for biscuits.</p>
 			<p>Oh and a <a href="https://github.com/cajogos/seesaw" title="SEESAW JS - Always running web applications." target="_blank">JavaScript framework</a> for always running web applications.</p>
 			<p>I often <a href="https://twitter.com/carlos_tweets" title="Follow Carlos Ferreira on Twitter." target="_blank">complain about my train commute</a>.</p>
+			<p>I have grown a recent obsession with cryptocurrencies, mainly <a href="/bitcoin" title="Check out my mining pool!"><i class="fa fa-bitcoin"></i> Bitcoin</a>.</p>
 			<p>I've been a Web Application Developer at <a href="https://uk.advfn.com/" title="ADVFN - Advanced Financial Network" target="_blank">ADVFN</a> since February 2015.</p>
 			<p>I've been a Lead Mentor, <a href="https://www.instagram.com/p/BL4GdOKh0z6/" target="_blank">International Speaker</a>, and Content Creator for <a href="https://coderdojo.com" target="_blank">CoderDojo</a> since May 2013.</p>
 			<p>Currently the head of development for the <a href="https://coderdojo.london" title="CoderDojo London Official Website" target="_blank">CoderDojo London</a> website.</p>

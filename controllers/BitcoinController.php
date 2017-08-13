@@ -25,6 +25,15 @@ class BitcoinController extends Controller
 		// NiceHash
 		$nicehash_api = NiceHashAPI::get();
 
+		// Check that Nicehash did not have issues
+		$problem = $nicehash_api->hasError();
+		$tpl->assign('nicehash_error', $problem);
+		if ($problem)
+		{
+			$tpl->display();
+			exit;
+		}
+
 		$tpl->assign('nicehash_key', NiceHashAPI::NICEHASH_WALLET_HASH);
 		$tpl->assign('nicehash_wallet_confirmed', $nicehash_api->getWalletConfirmedBalance());
 		$tpl->assign('nicehash_wallet_pending', $nicehash_api->getWalletPendingBalance());

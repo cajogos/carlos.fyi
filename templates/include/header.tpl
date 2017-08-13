@@ -56,7 +56,6 @@
 		<button class="toggle-button"><i class="fa fa-bars"></i></button>
 
 		<div class="container">
-			<div class="alert alert-warning small">Hey you there, thanks for visiting, I am currently in progress of developing this whole website, you will find some broken things... Use the links provided on this page if you wish to contact me. Thank you for visiting!</div>
 			{block name=body}{/block}
 			<div class="site-footer">
 				<p><a title="FYI That's me :)" href="https://carlos.fyi/">carlos.fyi</a> &copy; {date('Y')}</p>

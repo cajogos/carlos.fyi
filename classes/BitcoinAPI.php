@@ -2,7 +2,6 @@
 
 class BitcoinAPI
 {
-	const SATOSHI_DIVIDE = 100000000;
 	const HASH_COINBASE = '1EFi9eCmnWJvsvUAewkkcbZ7odfEWNf3KZ';
 
 	private static $instance = null;
@@ -19,7 +18,6 @@ class BitcoinAPI
 	private function __construct()
 	{
 		$this->load_monetary_values();
-		$this->load_final_balance();
 	}
 
 	public static function get()
@@ -77,26 +75,5 @@ class BitcoinAPI
 			$this->eur_value = $values['EUR'];
 			$this->gbp_value = $values['GBP'];
 		}
-	}
-
-	// Loads final balance from wallet hash
-	private function load_final_balance()
-	{
-		// Get unpaid balance
-		$api_url = 'https://blockchain.info/q/addressbalance/' . self::HASH_COINBASE;
-		$cache_key = 'blockchain_balance_info_v1807a';
-		$balance = TempCache::get($cache_key);
-		if (is_null($balance))
-		{
-			$client = new GuzzleHttp\Client();
-			$response = $client->get($api_url);
-			$body = (string)$response->getBody();
-			$balance = (float)$body;
-			// Blockchain returns integer which needs to be divided by a Satoshi
-			$balance /= self::SATOSHI_DIVIDE;
-			// Cache for 5 minutes to avoid API limit reach
-			TempCache::put($cache_key, $balance, TempCache::TIME_5_MIN);
-		}
-		$this->wallet_balance = (float)$balance;
 	}
 }

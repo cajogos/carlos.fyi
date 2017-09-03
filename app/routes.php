@@ -18,6 +18,8 @@ $router->map('GET', '/timeline', 'TimelineController::display', 'timeline');
 $router->map('GET', '/bitcoin', 'BitcoinController::display', 'bitcoin');
 
 
+
+
 /** 404 Page **/
 function handle404Page()
 {

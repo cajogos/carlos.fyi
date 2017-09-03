@@ -1,10 +1,15 @@
 <?php
 
+/**
+ * Class NiceHashAPI
+ */
 class NiceHashAPI
 {
-//	const NICEHASH_WALLET_HASH = '1LwgVb4CNqhG7hTuyhynftsU9NxSdSFutJ';
 	const NICEHASH_WALLET_HASH = '36uTBc7nkxnCF2Mq9etQkLCD8GSYqmSYE9';
 
+	/**
+	 * @var NiceHashAPI
+	 */
 	private static $instance = null;
 
 	private $algo_info = null;
@@ -14,6 +19,9 @@ class NiceHashAPI
 
 	private $has_error = false;
 
+	/**
+	 * NiceHashAPI constructor.
+	 */
 	private function __construct()
 	{
 		try
@@ -34,6 +42,9 @@ class NiceHashAPI
 		return $this->has_error;
 	}
 
+	/**
+	 * @return NiceHashAPI
+	 */
 	public static function get()
 	{
 		if (is_null(self::$instance))
@@ -43,26 +54,41 @@ class NiceHashAPI
 		return self::$instance;
 	}
 
+	/**
+	 * @return array
+	 */
 	public function getCurrentStats()
 	{
 		return $this->current_stats;
 	}
 
+	/**
+	 * @return array
+	 */
 	public function getCurrentWorkers()
 	{
 		return $this->current_workers;
 	}
 
+	/**
+	 * @return float
+	 */
 	public function getMiningBalance()
 	{
 		return $this->current_stats['mining_balance'];
 	}
 
+	/**
+	 * @return float
+	 */
 	public function getWalletConfirmedBalance()
 	{
 		return $this->balance_info['confirmed'];
 	}
 
+	/**
+	 * @return float
+	 */
 	public function getWalletPendingBalance()
 	{
 		return $this->balance_info['pending'];

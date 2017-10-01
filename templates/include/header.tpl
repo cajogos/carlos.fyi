@@ -88,5 +88,6 @@
 			toggleButton.html('<i class="fa fa-bars"></i>');
 		});
 	</script>
+	{block name=js}{/block}
 </body>
 </html>

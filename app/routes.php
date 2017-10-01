@@ -17,6 +17,8 @@ $router->map('GET', '/timeline', 'TimelineController::display', 'timeline');
 // Bitcoin
 $router->map('GET', '/bitcoin', 'BitcoinController::display', 'bitcoin');
 
+// Minesweeper
+$router->map('GET', '/minesweeper', 'MinesweeperController::display', 'minesweeper');
 
 
 

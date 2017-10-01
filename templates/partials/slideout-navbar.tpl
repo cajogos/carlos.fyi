@@ -7,16 +7,21 @@
 <a class="nav-link" href="/timeline" title="See events from my life, aka resume.">Timeline</a>
 <a class="nav-link" href="/bitcoin" title=""><i class="fa fa-bitcoin"></i> Bitcoin</a>
 
-<!--
 <span class="nav-header">My Work</span>
-<a class="nav-link" href="#portfolio" title=""><del>Projects</del></a>
-<a class="nav-link" href="#workopen-source" title=""><del>Open Source</del></a>
-<a class="nav-link" href="#workandroid" title=""><del>Android Dev</del></a>
--->
-
+<a class="nav-link" href="/minesweeper" title="Play some minesweeper in your browser!">
+	<i class="fa fa-bomb"></i> Minesweeper
+</a>
+<a class="nav-link" href="https://biscuit.link" title="The Biscuit Link PHP Framework" target="_blank">
+	Biscuit Link
+</a>
+<a class="nav-link" href="https://github.com/cajogos?tab=repositories" title="Check out my repositories on GitHub!" target="_blank">
+	Open Source
+</a>
+<a class="nav-link" href="https://play.google.com/store/apps/developer?id=Carlos+Ferreira" title="See all my Android apps!" target="_blank">
+	Android Apps
+</a>
 
 <span class="nav-header">Others</span>
-<a class="nav-link" href="https://biscuit.link" title="Biscuit Link PHP Framework" target="_blank">Biscuit Link</a>
 <a class="nav-link" href="https://coderdojo.london" title="CoderDojo London's official website" target="_blank">Coderdojo London</a>
 <a class="nav-link" href="http://technewbs.com" title="A community for technology and gaming lovers." target="_blank">TechNewbs</a>
 

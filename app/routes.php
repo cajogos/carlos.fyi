@@ -15,7 +15,8 @@ $router->map('GET', '/skills', 'SkillsController::display', 'skills');
 $router->map('GET', '/timeline', 'TimelineController::display', 'timeline');
 
 // Bitcoin
-$router->map('GET', '/bitcoin', 'BitcoinController::display', 'bitcoin');
+$router->map('GET', '/crypto', 'CryptoController::display', 'crypto');
+$router->map('GET', '/bitcoin', 'CryptoController::redirect', 'bitcoin');
 
 // Minesweeper
 $router->map('GET', '/minesweeper', 'MinesweeperController::display', 'minesweeper');

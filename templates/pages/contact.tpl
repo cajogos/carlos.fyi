@@ -18,7 +18,7 @@
 		<div class="col-sm-1"></div>
 		<div class="col-sm-4">
 			<h2>Methods of contact</h2>
-			<p>I am pretty much everywhere on the Interwebz! Mostly known online by the nickname of <strong>cajogos</strong>.</p>
+			<p>I am pretty much everywhere on the Interwebz! Mostly known online by the nickname of <strong><a href="https://duckduckgo.com/?q=cajogos" target="_blank">cajogos</a></strong>.</p>
 			<h3>So you want to...</h3>
 			<div class="contact-methods">
 				<h4>

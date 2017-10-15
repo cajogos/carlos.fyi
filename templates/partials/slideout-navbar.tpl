@@ -5,7 +5,7 @@
 <a class="nav-link" href="/contact" title="Contact Carlos Ferreira web developer from London.">Contact Me</a>
 <a class="nav-link" href="/skills" title="Check out the skills of Carlos Ferreira.">My Skills</a>
 <a class="nav-link" href="/timeline" title="See events from my life, aka resume.">Timeline</a>
-<a class="nav-link" href="/bitcoin" title=""><i class="fa fa-bitcoin"></i> Bitcoin</a>
+<a class="nav-link" href="/crypto" title="Check out some stats about my HODLing journey.">Cryptocurrency</a>
 
 <span class="nav-header">My Work</span>
 <a class="nav-link" href="/minesweeper" title="Play some minesweeper in your browser!">

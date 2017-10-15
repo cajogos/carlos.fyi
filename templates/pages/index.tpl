@@ -16,24 +16,22 @@
 			</p>
 		</div>
 		<div class="col-sm-8">
-			<h2>Facts</h2>
-
-			<h3>About Me</h3>
+			<h2>About Me</h2>
 			<p>My full name is <strong>Carlos Jorge Lima Ferreira</strong>, but my friends call me <strong class="color-cajogos-blue">Carlos</strong>. <small>(yes, you can call me Carlos)</small></p>
-			<p>I was born in 1994, which makes me 23 years <del>old</del> young, I share a birthday with Cher, although she was born 48 years before me.</p>
+			<p>I was born in 1994, which makes me 23 years <del>old</del> young.</p>
 			<p>I lived in Viseu, Portugal*, until I was 13, and I am now living in London. <small>(the one in the United Kingdom)</small></p>
 			<p>I graduated with a first-class degree in BSc (Hons) Computer Science from the University of Greenwich.</p>
 			<p>I studied A-Levels in Mathematics (with Statistics), ICT, Portuguese and Graphics Design.</p>
-			<p class="small">*Sim, eu sei falar e escrever em Portugu&ecirc;s, <em>and English</em>.</p>
+			<p class="small">*Sim, eu sei falar e escrever em Portugu&ecirc;s.</p>
 
-			<h3>Things I do</h3>
+			<h2>Things I do</h2>
 			<p>Drink <em>at least</em> a cup of coffee a day.</p>
 			<p>I like to write and contribute to <a href="https://github.com/cajogos" title="See my Github contributions." target="_blank">open-source code</a>.</p>
 			<p>I created some <a href="https://packagist.org/packages/cajogos/php-temp-cache" title="PHP TempCache" target="_blank">PHP Caching Library</a>.</p>
 			<p>I have my own <a href="https://biscuit.link" title="Biscuit Link - PHP Framework for Everyone" target="_blank">PHP framework</a>, deeply inspired in my love for biscuits.</p>
 			<p>Oh and a <a href="https://github.com/cajogos/seesaw" title="SEESAW JS - Always running web applications." target="_blank">JavaScript framework</a> for always running web applications.</p>
 			<p>I often <a href="https://twitter.com/carlos_tweets" title="Follow Carlos Ferreira on Twitter." target="_blank">complain about my train commute</a>.</p>
-			<p>I have grown a recent obsession with cryptocurrencies, mainly <a href="/bitcoin" title="Check out my mining pool!"><i class="fa fa-bitcoin"></i> Bitcoin</a>.</p>
+			<p>I have an obsession with cryptocurrencies, check out <a href="/crypto" title="View my cryptocurrency stats.">what I am HODLing</a>.</p>
 			<p>I've been a Web Application Developer at <a href="https://uk.advfn.com/" title="ADVFN - Advanced Financial Network" target="_blank">ADVFN</a> since February 2015.</p>
 			<p>I've been a Lead Mentor, <a href="https://www.instagram.com/p/BL4GdOKh0z6/" target="_blank">International Speaker</a>, and Content Creator for <a href="https://coderdojo.com" target="_blank">CoderDojo</a> since May 2013.</p>
 			<p>Currently the head of development for the <a href="https://coderdojo.london" title="CoderDojo London Official Website" target="_blank">CoderDojo London</a> website.</p>

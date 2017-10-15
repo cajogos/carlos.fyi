@@ -2,7 +2,7 @@
 
 class BitcoinAPI
 {
-	const HASH_COINBASE = '1EFi9eCmnWJvsvUAewkkcbZ7odfEWNf3KZ';
+	const HASH_COINBASE = '1CDPwYXvNFhGVjDyp1vuit4beX2CpoAehL';
 
 	private static $instance = null;
 

@@ -1,6 +1,5 @@
 <?php
 
-// Bunch of API calls for cbot
 require_once '../../app/init.php';
 
 $valid_methods = array(
@@ -24,9 +23,9 @@ if ($_GET)
             case 'bitcoinValue':
                 $bitcoin_api = BitcoinAPI::get();
                 $values = array(
-                    'USD' => $bitcoin_api->getUSDValue(),
-                    'GBP' => $bitcoin_api->getGBPValue(),
-                    'EUR' => $bitcoin_api->getEURValue()
+                    'USD' => $bitcoin_api->getMonetaryValues('BTC')['USD'],
+                    'GBP' => $bitcoin_api->getMonetaryValues('BTC')['GBP'],
+                    'EUR' => $bitcoin_api->getMonetaryValues('BTC')['EUR']
                 );
                 $result['values'] = $values;
                 $result['status'] = 'success';

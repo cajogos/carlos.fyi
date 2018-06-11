@@ -18,7 +18,7 @@
 		<div class="col-sm-8">
 			<h2>About Me</h2>
 			<p>My full name is <strong>Carlos Jorge Lima Ferreira</strong>, but my friends call me <strong class="color-cajogos-blue">Carlos</strong>. <small>(yes, you can call me Carlos)</small></p>
-			<p>I was born in 1994, which makes me 23 years <del>old</del> young.</p>
+			<p>I was born in 1994, which makes me {$age} years <del>old</del> young.</p>
 			<p>I lived in Viseu, Portugal*, until I was 13, and I am now living in London. <small>(the one in the United Kingdom)</small></p>
 			<p>I graduated with a first-class degree in BSc (Hons) Computer Science from the University of Greenwich.</p>
 			<p>I studied A-Levels in Mathematics (with Statistics), ICT, Portuguese and Graphics Design.</p>

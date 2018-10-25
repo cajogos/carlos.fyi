@@ -10,12 +10,18 @@
 	<p>Of course, you could always checkout my <a href="https://linkedin.com/in/cajogos" target="_blank">LinkedIn</a> for a more <em>"professional"</em> look.</p>
 	<p>Interested in what you see? <a href="/contact">Speak to me</a>.
 
+	<h2>2018</h2>
+	<ul>
+		<li><strong>Jan:</strong> Left CoderDojo after over 4 years of being a lead mentor in London.</li>
+	</ul>
+
 	<h2>2017</h2>
 	<ul>
+		<li><strong>Oct:</strong> Became Senior Developer at <a href="http://www.advfn.com" target="_blank">ADVFN</a>.</li>
 		<li><strong>Jun:</strong> Got involved with <a href="/crypto">Cryptocurrencies</a>.</li>
 		<li><strong>Apr:</strong> Officially released my own PHP Framework called <a href="https://biscuit.link" target="_blank">Biscuit Link</a>.</li>
 		<li><strong>Jan:</strong> Launched this website and the new <a href="/">carlos.fyi</a> brand.</li>
-		<li><strong>Jan:</strong> Became head of development for the new <a href="https://coderdojo.london" target="_blank">CoderDojo London</a> website.</li>
+		<li><strong>Jan:</strong> Became head of development for the new CoderDojo London website (now gone).</li>
 	</ul>
 	<hr />
 	<h2>2016</h2>
@@ -26,9 +32,9 @@
 	<hr />
 	<h2>2015</h2>
 	<ul>
-		<li><strong>Oct:</strong> Now Web Application Developer at <a href="http://advfn.com" target="_blank">ADVFN</a>.</li>
+		<li><strong>Oct:</strong> Became Web Application Developer at <a href="http://www.advfn.com" target="_blank">ADVFN</a>.</li>
 		<li><strong>Jul:</strong> Graduated, with first class, BSc (Hons) Computer Science from University of Greenwich in London.</li>
-		<li><strong>Feb:</strong> Junior developer role at <a href="http://advfn.com" target="_blank">ADVFN</a>.</li>
+		<li><strong>Feb:</strong> Junior developer role at <a href="http://www.advfn.com" target="_blank">ADVFN</a>.</li>
 	</ul>
 	<hr />
 	<h2>2014</h2>

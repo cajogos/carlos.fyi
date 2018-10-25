@@ -34,7 +34,6 @@
 			<p>I have an obsession with cryptocurrencies, check out <a href="/crypto" title="View my cryptocurrency stats.">what I am HODLing</a>.</p>
 			<p>I've been a Web Application Developer at <a href="https://uk.advfn.com/" title="ADVFN - Advanced Financial Network" target="_blank">ADVFN</a> since February 2015.</p>
 			<p>I've been a Lead Mentor, <a href="https://www.instagram.com/p/BL4GdOKh0z6/" target="_blank">International Speaker</a>, and Content Creator for <a href="https://coderdojo.com" target="_blank">CoderDojo</a> since May 2013.</p>
-			<p>Currently the head of development for the <a href="https://coderdojo.london" title="CoderDojo London Official Website" target="_blank">CoderDojo London</a> website.</p>
 
 			<div class="row">
 				<div class="col-xs-6">

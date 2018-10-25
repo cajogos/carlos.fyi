@@ -1,5 +1,6 @@
 <?php
 
+use \Cajogos\Biscuit\Controller as Controller;
 use \Cajogos\Biscuit\Template as Template;
 
 class CryptoController extends Controller

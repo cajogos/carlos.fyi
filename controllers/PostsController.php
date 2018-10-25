@@ -26,7 +26,7 @@ class PostsController extends Controller
 		$tpl = Template::create('pages/post.tpl');
 		$tpl->assign('page_title', $page_title);
 		$tpl->assign('page_id', 'post');
-		$tpl->assign('social_title', $page_title . 'Carlos Ferreira - All Things Developer from London');
+		$tpl->assign('social_title', $page_title . ' Carlos Ferreira');
 		$tpl->assign('social_desc', 'Name is Carlos and I like making things. Check out my website to know what I can do.');
 		$tpl->addElement('markdown_el', $markdown_el);
 		$tpl->display();

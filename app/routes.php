@@ -21,6 +21,9 @@ $router->map('GET', '/bitcoin', 'CryptoController::redirect', 'bitcoin');
 // Minesweeper
 $router->map('GET', '/minesweeper', 'MinesweeperController::display', 'minesweeper');
 
+// Posts
+$router->map('GET', '/posts/[:post_id]', 'PostsController::displayPost');
+
 
 use \Cajogos\Biscuit\Template as Template;
 

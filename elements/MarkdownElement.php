@@ -7,6 +7,8 @@ class MarkdownElement extends Element
 	private $parsedown = null;
 	private $file = null;
 
+	private $contents = null;
+
 	public function __construct()
 	{
 		$this->parsedown = new Parsedown();
@@ -17,14 +19,41 @@ class MarkdownElement extends Element
 		$this->file = $file;
 	}
 
+	public function exists()
+	{
+		try
+		{
+			$this->load_contents();
+		}
+		catch (Exception $e)
+		{
+			return false;
+		}
+		return true;
+	}
+
+	private function load_contents()
+	{
+		if (is_null($this->contents))
+		{
+			$this->contents = @file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../templates/markdown/' . $this->file . '.md');
+			if ($this->contents === false)
+			{
+				throw new Exception('File does not exist!');
+			}
+		}
+	}
+
 	public function getString()
 	{
-		$file_contents = @file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/../templates/markdown/' . $this->file . '.md');
-
-		if ($file_contents !== false)
+		try
 		{
-			return $this->parsedown->text($file_contents);
+			$this->load_contents();
 		}
-		return 'Markdown file not found!';
+		catch (Exception $e)
+		{
+			return null;
+		}
+		return $this->parsedown->text($this->contents);
 	}
 }

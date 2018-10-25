@@ -1,5 +1,7 @@
 <?php
 
+use \Cajogos\TempCache as TempCache;
+
 class BitcoinAPI
 {
     private static $wallet_hashes = array(

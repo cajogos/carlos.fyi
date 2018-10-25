@@ -69,6 +69,10 @@ div.splash div.social-links p {
 	margin-top: 20px;
 }
 
+a:visited {
+	color:white;
+}
+
 @media (max-width: 720px) {
 	div.splash {
 		padding-top: 100px;

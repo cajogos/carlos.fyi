@@ -22,6 +22,7 @@ $router->map('GET', '/bitcoin', 'CryptoController::redirect', 'bitcoin');
 $router->map('GET', '/minesweeper', 'MinesweeperController::display', 'minesweeper');
 
 
+use \Cajogos\Biscuit\Template as Template;
 
 /** 404 Page **/
 function handle404Page()
@@ -30,7 +31,7 @@ function handle404Page()
 	$tpl = Template::create('404-splash.tpl');
 	$tpl->assign('page_title', '404 Not Found - Carlos Ferreira - All Things Developer');
 	$tpl->assign('title', '404 - Not Found :(');
-	$tpl->assign('subtitle', 'Oops! Looks like whatever you were looking for can not be found... Please try again later . You will be redirected in 10 seconds...');
+	$tpl->assign('subtitle', 'Oops! Looks like whatever you were looking for can not be found... <a href="/">Please try again</a>. You will be redirected in 1 minute...');
 	$tpl->display();
 }
 

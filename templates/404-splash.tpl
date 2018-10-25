@@ -22,6 +22,6 @@
 <script type="text/javascript" src="/assets/js/splash.js"></script>
 <script type="text/javascript">
 	// Redirect to homepage after 10 seconds
-	setTimeout(function() { window.location = '/'; }, 10000);
+	setTimeout(function() { window.location = '/'; }, 60000);
 </script>
 {/block}

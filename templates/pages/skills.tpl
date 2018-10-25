@@ -11,7 +11,7 @@
 		<div class="col-sm-6">
 			<h2 class="skill-title"><i class="fa fa-graduation-cap"></i> Teach &amp; Learn</h2>
 			<p>One thing I believe in is that you get better at what you do when you teach it.</p>
-			<p>This is why I have dedicated myself to teaching and mentoring. I have been a lead mentor of <a href="https://coderdojo.london" target="_blank">CoderDojo in London</a> for over 3 and half years.</p>
+			<p>This is why I have dedicated myself to teaching and mentoring. I was a lead mentor of CoderDojo in London for over 4 years.</p>
 			<p>I have also many years of experience in mentoring Computer Science to university students, which I find it helps me stay up-to-date with what is being taught, and gives me a chance to give my knowledge and experience to my mentees.</p>
 		</div>
 		<div class="col-sm-6">
@@ -33,14 +33,14 @@
 			<h2 class="skill-title"><i class="fa fa-database"></i> The Back-backend</h2>
 			<p>One of my favourite superpowers is what I like to call the back-backend.</p>
 			<p>I am already experienced in backend languages such as PHP, but I do love myself some server management too.</p>
-			<p>I have been managing web servers for almost 10 years, all the way from ftp-only, cPanel managed and now to full Linux (mainly Debian based) virtual private servers. I usually go for a LEMP stack, but have played around with many other stacks - even including the MEAN stack.</p>
+			<p>I have been managing web servers for over 10 years, all the way from ftp-only, cPanel managed and now to full Linux (mainly Debian based) virtual private servers. I usually go for a LEMP stack, but have played around with many other stacks - even including the MEAN stack.</p>
 			<p>My choice of VPS provider has to be <a href="https://m.do.co/c/67f4ef2abcdb" target="_blank" title="Use this link to get $10 when you sign-up! I will get $25 once you spend $25 - so win-win :)">Digital Ocean</a>.</p>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-sm-6">
 			<h2 class="skill-title"><i class="fa fa-tablet"></i> Mobile Enthusiast</h2>
-			<p>One of my hobbies is mobile app development. Having <a href="https://play.google.com/store/apps/developer?id=Carlos+Ferreira" target="_blank">published a few apps</a>.</p>
+			<p>One of my hobbies is mobile app development. Having published a few apps in the past.</p>
 			<p>The concept of a native app shines bright to me. Although, I am a Web Application Developer at heart I do consider the benefits of building a native mobile application to better gain use of these amazing devices we have in our pockets.</p>
 			<p>I have a big interest for building new apps and playing around with the cameras and sensors of our tiny little friends we call smartphones, so if you have some cool app idea do <a href="/contact">let me know</a>.</p>
 		</div>
@@ -48,7 +48,7 @@
 			<h2 class="skill-title"><i class="fa fa-sitemap"></i> SEO</h2>
 			<p>Search Engine Optimization nowadays is the holy grail. I have been gaining knowledge on how to make sure my websites are found on that first page of the big G, doing some research on the Google Search API.</p>
 			<p>My main tools for this job are, of course, Google Analytics and the Google Search Console. These and as many other tools I need to better improve the ranking of my pages.</p>
-			<p>There is a reason as to why you ended up on this page.</p>
+			<p>There is a reason as to how you ended up on this page.</p>
 		</div>
 	</div>
 </div>

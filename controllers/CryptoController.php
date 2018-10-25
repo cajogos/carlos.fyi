@@ -1,5 +1,7 @@
 <?php
 
+use \Cajogos\Biscuit\Template as Template;
+
 class CryptoController extends Controller
 {
     public static function redirect()

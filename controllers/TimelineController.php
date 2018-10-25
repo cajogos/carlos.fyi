@@ -1,5 +1,7 @@
 <?php
 
+use \Cajogos\Biscuit\Template as Template;
+
 class TimelineController extends Controller
 {
 	public static function display()

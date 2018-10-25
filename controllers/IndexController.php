@@ -1,5 +1,7 @@
 <?php
 
+use \Cajogos\Biscuit\Template as Template;
+
 class IndexController extends Controller
 {
 	public static function display()

@@ -1,5 +1,7 @@
 <?php
 
+use \Cajogos\Biscuit\Template as Template;
+
 class ContactController extends Controller
 {
 	public static function display()

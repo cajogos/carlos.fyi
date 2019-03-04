@@ -21,6 +21,9 @@ $router->map('GET', '/bitcoin', 'CryptoController::redirect', 'bitcoin');
 // Minesweeper
 $router->map('GET', '/minesweeper', 'MinesweeperController::display', 'minesweeper');
 
+// Solve Rubiks cube
+$router->map('GET', '/rubiks-cube', 'IndexController::displayRubiksCube', 'rubiks-cube');
+
 
 use \Cajogos\Biscuit\Template as Template;
 

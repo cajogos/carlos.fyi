@@ -1,0 +1,98 @@
+ul.cube-algo {
+    display: block;
+    margin: 5px 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+}
+
+ul.cube-algo li[data-move] {
+    display: inline-block;
+    vertical-align: top;
+    font-family: monospace;
+    text-align: center;
+    font-size: 14px;
+    margin: 5px;
+    color: #000;
+}
+
+ul.cube-algo li[data-move] div.move {
+    box-shadow: 0 0 4px #000;
+    border-radius: 15px;
+    border: 2px inset;
+    background: black;
+    color: white;
+}
+
+ul.cube-algo li[data-move] div.move.rotation-U {
+    background: darkorange;
+}
+
+ul.cube-algo li[data-move] div.move.rotation-D {
+    background: darkred;
+}
+
+ul.cube-algo li[data-move] div.move.rotation-F {
+    background: black;
+    color: white;
+}
+
+ul.cube-algo li[data-move] div.move.rotation-B {
+    background: yellow;
+    color: black;
+}
+
+ul.cube-algo li[data-move] div.move.rotation-R {
+    background: darkblue;
+}
+
+ul.cube-algo li[data-move] div.move.rotation-L {
+    background: darkgreen;
+}
+
+ul.cube-algo li[data-move] div.move.direction-cw {
+    box-shadow: 0 0 5px 2px lime;
+    border: 2px solid lime;
+}
+
+ul.cube-algo li[data-move] div.move.direction-acw {
+    box-shadow: 0 0 5px 2px red;
+    border: 2px solid red;
+}
+
+ul.cube-algo li[data-move] div.move div.row-top,
+ul.cube-algo li[data-move] div.move div.row-bottom {
+    width: inherit;
+    height: 18px;
+}
+
+ul.cube-algo li[data-move] div.move div.row-middle {
+    line-height: 28px;
+    font-weight: bold;
+    height: 28px;
+}
+
+ul.cube-algo li[data-move] div.move div.row-middle div.col-left,
+ul.cube-algo li[data-move] div.move div.row-middle div.col-right,
+ul.cube-algo li[data-move] div.move div.row-middle div.col-text {
+    vertical-align: top;
+    display: inline-block;
+    height: inherit;
+}
+
+ul.cube-algo li[data-move] div.move div.row-middle div.col-left,
+ul.cube-algo li[data-move] div.move div.row-middle div.col-right {
+    width: 18px;
+}
+
+ul.cube-algo li[data-move] div.move div.row-middle div.col-text {
+    border: 2px inset;
+    font-family: monospace;
+    background: white;
+    font-size: 20px;
+    color: black;
+    width: 28px;
+}
+
+ul.cube-algo li[data-move] div.move div.row-bottom {
+}

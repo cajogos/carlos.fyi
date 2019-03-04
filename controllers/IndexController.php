@@ -15,4 +15,14 @@ class IndexController extends Controller
 		$tpl->assign('age', Utils::getage('20-05-1994'));
 		$tpl->display();
 	}
+
+	public static function displayRubiksCube()
+	{
+		$tpl = Template::create('pages/rubiks-cube.tpl');
+		$tpl->assign('page_title', 'How to solve 3x3 Rubik\'s Cube');
+		$tpl->assign('page_id', 'rubiks-cube');
+		$tpl->assign('social_title', 'How to solve the 3x3 Rubik\'s Cube with Carlos Ferreira');
+		$tpl->assign('social_desc', 'Learn how to solve the Rubik\'s Cube with the most simplified guide.');
+		$tpl->display();
+	}
 }

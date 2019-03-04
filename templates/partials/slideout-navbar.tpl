@@ -18,11 +18,6 @@
 	<i class="fa fa-bomb"></i> Minesweeper
 </a>
 
-<span class="nav-header">Posts</span>
-<a class="nav-link" href="/posts/great-day" title="A Great Day at the Office (Summary)">
-	A Great Day at the Office
-</a>
-
 <div class="nav-footer">
 	<p>Made with <i class="fa fa-heart color-global-orangered"></i> by me.</p>
 	<p><i class="fa fa-envelope"></i> <a href="mailto:c@rlos.rocks">c@rlos.rocks</a></p>

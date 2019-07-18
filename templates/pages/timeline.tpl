@@ -14,7 +14,7 @@
 	<ul>
 		<li><strong>Jan:</strong> Left CoderDojo after over 4 years of being a lead mentor in London.</li>
 	</ul>
-
+	<hr />
 	<h2>2017</h2>
 	<ul>
 		<li><strong>Oct:</strong> Became Senior Developer at <a href="http://www.advfn.com" target="_blank">ADVFN</a>.</li>

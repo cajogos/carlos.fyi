@@ -16,7 +16,7 @@
 		</div>
 		<div class="col-sm-6">
 			<h2 class="skill-title"><i class="fa fa-microchip"></i> Tech Savvy</h2>
-			<p>Although coding is my passion, I am well knowledgeable of many aspects of Computer Science and I love technology!</p>
+			<p>Although coding is my passion, I am knowledgeable of many aspects of Computer Science and I love technology!</p>
 			<p>I like building PCs and fixing things. Feel free to <a href="https://twitter.com/carlos_tweets" target="_blank" title="Also feel free to follow me on Twitter.">tweet at me</a> if you want some help.</p>
 			<p>You will often find me reading newsletters and blogs about new tech and new discoveries related to computer science.</p>
 			<p>I recommend you to subscribe to the <a href="https://www.technologyreview.com/" target="_blank" title="Scroll down to the bottom of the page to subscribe to it.">MIT's Technology Review Download</a> - love reading it at lunch time!</p>

@@ -18,6 +18,10 @@ body {
 	color: #EB6864;
 }
 
+.color-global-yellow {
+	color: #F8CC03;
+}
+
 /* NAVIGATION MENU */
 div#navigation-menu {
 	background: #222;

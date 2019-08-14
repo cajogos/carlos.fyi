@@ -3,15 +3,14 @@
 $handler = SiteHandler::get();
 
 // Main Routes
-$handler->addRoute('GET', '/', 'IndexController::display', 'index');
-$handler->addRoute('GET', '/contact', 'ContactController::display', 'contact');
-$handler->addRoute('GET', '/skills', 'SkillsController::display', 'skills');
-$handler->addRoute('GET', '/timeline', 'TimelineController::display', 'timeline');
+$handler->addRoute('GET', '/', 'MainController::displayIndex', 'index');
+$handler->addRoute('GET', '/contact', 'MainController::displayContact', 'contact');
+$handler->addRoute('GET', '/skills', 'MainController::displaySkills', 'skills');
+$handler->addRoute('GET', '/timeline', 'MainController::displayTimeline', 'timeline');
 
 // Other Routes
-$handler->addRoute('GET', '/crypto', 'CryptoController::display', 'crypto');
-$handler->addRoute('GET', '/bitcoin', 'CryptoController::redirect', 'bitcoin');
-$handler->addRoute('GET', '/minesweeper', 'MinesweeperController::display', 'minesweeper');
-$handler->addRoute('GET', '/rubiks-cube', 'IndexController::displayRubiksCube', 'rubiks-cube');
+$handler->addRoute('GET', '/rubiks-cube', 'MainController::displayRubiksCube', 'rubiks-cube');
+$handler->addRoute('GET', '/minesweeper', 'MainController::displayMinesweeper', 'minesweeper');
+$handler->addRoute('GET', '/crypto', 'MainController::displayCryptocurrencies', 'crypto');
 
 $handler->handleRouting();

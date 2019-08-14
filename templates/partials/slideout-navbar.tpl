@@ -14,11 +14,13 @@
 <a class="nav-link" href="https://github.com/cajogos?tab=repositories" title="Check out my repositories on GitHub!" target="_blank">
 	Open Source
 </a>
+
+<span class="nav-header">Miscellaneous</span>
 <a class="nav-link" href="/minesweeper" title="Play some minesweeper in your browser!">
 	<i class="fa fa-bomb"></i> Minesweeper
 </a>
 <a class="nav-link" href="/rubiks-cube" title="Learn how to solve the 3x3 Rubik's Cube">
-	<i class="fa fa-cube"></i> 3x3 Rubik's Cube
+	<i class="fa fa-cube"></i> 3x3 Rubik's Cube Tutorial
 </a>
 
 <div class="nav-footer">

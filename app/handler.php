@@ -13,4 +13,10 @@ $handler->addRoute('GET', '/rubiks-cube', 'MainController::displayRubiksCube', '
 $handler->addRoute('GET', '/minesweeper', 'MainController::displayMinesweeper', 'minesweeper');
 $handler->addRoute('GET', '/crypto', 'MainController::displayCryptocurrencies', 'crypto');
 
+// Blog Routes
+$handler->addRoute('GET', '/blog', 'BlogController::displayBlogHome', 'blog-home');
+$handler->addRoute('GET', '/blog/author/[*:author_id]', 'BlogController::displayBlogAuthor', 'blog-author');
+$handler->addRoute('GET', '/blog/category/[*:category_id]', 'BlogController::displayBlogCategory', 'blog-category');
+$handler->addRoute('GET', '/blog/[*:post_id]', 'BlogController::displayBlogPost', 'blog-post');
+
 $handler->handleRouting();

@@ -1,1 +1,9 @@
-{}
+{
+  "displayName": "Carlos Ferreira",
+  "avatar": "avatar.png",
+  "bio": "lorem ipsum dolor sit amet",
+  "posts": [
+    "test-123"
+  ],
+  "twitter": "Carlos_Tweets"
+}

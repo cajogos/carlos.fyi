@@ -1,7 +1,7 @@
 <?php
 
 // Determine if in Development mode (localhost)
-$localhost = (strstr($_SERVER['HTTP_HOST'], 'localhost') !== false);
+$localhost = !(strstr($_SERVER['HTTP_HOST'], 'carlos.fyi') !== false);
 define('DEV_MODE', $localhost);
 if (DEV_MODE)
 {

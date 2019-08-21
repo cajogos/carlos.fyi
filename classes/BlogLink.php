@@ -8,6 +8,13 @@ class BlogLink
 	private static function get_root_url()
 	{
 		$url = \Purl\Url::fromCurrent();
+		$host = $_SERVER['HTTP_HOST'];
+		if (strstr($host, ':') !== false)
+		{
+			$host = explode(':', $host, 2);
+			$url->set('port', $host[1]);
+		}
+
 		$url->path = null;
 		$url->path->add('blog');
 		return $url;

@@ -22,23 +22,35 @@ div.blog-post div.post-header div.post-headline {
     position: absolute;
     text-align: center;
     width: 100%;
-    top: 0;
+    top: 15px;
 }
 
 div.blog-post div.post-header div.post-headline h1 {
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 1px 1px 4px #000000;
     color: #FFFFFF;
     cursor: default;
-    margin: 10px 0 0 0;
+    margin: 15px 0 0 0;
     font-size: 42px;
 }
 
-div.blog-post div.post-header div.post-headline h2 {
-    text-transform: uppercase;
-    font-size: 20px;
+div.blog-post div.post-header div.post-headline ul.post-categories {
+    display: block;
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
-div.blog-post div.post-content {
-    /*background: blue;*/
+div.blog-post div.post-header div.post-headline ul.post-categories li.post-category {
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    margin: 12px;
+    padding: 0;
 }
+
+div.blog-post div.post-header div.post-headline ul.post-categories li.post-category a {
+    text-shadow: 0 0 5px #000000;
+    color: #FFFFFF;
+}
+
+div.blog-post div.post-content {}

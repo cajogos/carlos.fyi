@@ -72,6 +72,14 @@ class BlogAuthor
 	/**
 	 * @return string
 	 */
+	public function getAvatar()
+	{
+		return $this->avatar;
+	}
+
+	/**
+	 * @return string
+	 */
 	public function getURL()
 	{
 		return BlogLink::getAuthorURL($this);

@@ -87,6 +87,58 @@ class BlogPost
 	}
 
 	/**
+	 * @return BlogAuthor[]
+	 * @throws BlogHandlerException
+	 */
+	public function getAuthors()
+	{
+		$authors = array();
+		foreach ($this->authors as $author_id)
+		{
+			$authors[] = BlogHandler::getBlogAuthorById($author_id);
+		}
+		return $authors;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getFeaturedImage()
+	{
+		return $this->featured_image;
+	}
+
+	/**
+	 * @return BlogCategory[]
+	 * @throws BlogHandlerException
+	 */
+	public function getCategories()
+	{
+		$categories = array();
+		foreach ($this->categories as $category_id)
+		{
+			$categories[] = BlogHandler::getBlogCategoryById($category_id);
+		}
+		return $categories;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getDatePublished()
+	{
+		return $this->date_published;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getDateUpdated()
+	{
+		return $this->date_updated;
+	}
+
+	/**
 	 * @return string
 	 * @throws BlogHandlerException
 	 */
@@ -116,4 +168,6 @@ class BlogPost
 	{
 		return BlogLink::getPostURL($this);
 	}
+
+
 }

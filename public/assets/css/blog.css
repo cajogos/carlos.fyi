@@ -3,9 +3,42 @@ div.blog-page {
 }
 
 div.blog-post {
-    background: green;
 }
 
-div.post-content {
+div.blog-post div.post-header {
+    position: relative;
+    height: 140px;
+}
+
+div.blog-post div.post-header div.featured-image {
+    height: 100%;
+    filter: blur(1px);
+    background-size: cover;
+    background-position: center center;
+}
+
+div.blog-post div.post-header div.post-headline {
+    /*background: orange;*/
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0;
+}
+
+div.blog-post div.post-header div.post-headline h1 {
+    text-shadow: 2px 2px 4px #000000;
+    color: #FFFFFF;
+    cursor: default;
+    margin: 10px 0 0 0;
+    font-size: 42px;
+}
+
+div.blog-post div.post-header div.post-headline h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+}
+
+div.blog-post div.post-content {
     /*background: blue;*/
 }

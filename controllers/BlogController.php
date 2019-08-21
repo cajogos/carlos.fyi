@@ -76,10 +76,9 @@ class BlogController extends Controller
 		}
 
 		$tpl = Template::create('blog/post.tpl');
-		$tpl->assign('post_id', $post->getID());
-		$tpl->assign('post_headline', $post->getHeadline());
-		$tpl->assign('post_content', $post->getContent());
-		$tpl->assign('post_url', $post->getURL());
+		$tpl->assign('post', $post);
+		$tpl->assign('authors', $post->getAuthors());
+		$tpl->assign('categories', $post->getCategories());
 		$tpl->display();
 	}
 

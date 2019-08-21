@@ -2,8 +2,6 @@
 
 class BlogLink
 {
-	const ROOT_URL = '/blog';
-
 	/**
 	 * @return \Purl\Url
 	 */

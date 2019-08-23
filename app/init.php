@@ -14,7 +14,7 @@ if (DEV_MODE)
 session_start();
 
 // Add the app_config.php file
-require $_SERVER['DOCUMENT_ROOT'] . '/../../../config/app_config.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/../../config/app_config.php';
 
 // Composer autoloader
 require $_SERVER['DOCUMENT_ROOT'] . '/../vendor/autoload.php';

@@ -94,7 +94,7 @@ class BlogController extends Controller
 		$posts = BlogHandler::getAllActivePosts();
 		$xml = BlogRSS::generateForPosts($posts);
 
-
+		header('Content-type: application/xml; charset=UTF-8');
 		echo $xml;
 		exit;
 	}

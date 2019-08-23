@@ -10,6 +10,11 @@ class BlogPost
 	/**
 	 * @var string
 	 */
+	private $disqus_id = null;
+
+	/**
+	 * @var string
+	 */
 	private $headline = null;
 
 	/**
@@ -50,6 +55,7 @@ class BlogPost
 	private function __construct($post_id, $data)
 	{
 		$this->id = $post_id;
+		$this->disqus_id = (string)$data['disqus_id'];
 		$this->headline = (string)$data['headline'];
 		$this->description = (string)$data['description'];
 		$this->author = (string)$data['author'];
@@ -76,6 +82,14 @@ class BlogPost
 	public function getID()
 	{
 		return $this->id;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getDisqusID()
+	{
+		return $this->disqus_id;
 	}
 
 	/**

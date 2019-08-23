@@ -41,7 +41,28 @@
         </div>
 
         <div class="post-comments">
-            <h3 class="text-center">Comments coming soon...</h3>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+            <script type="text/javascript">
+                var PAGE_URL = '{$post->getURL()}';
+                var PAGE_IDENTIFIER = '{$post->getDisqusID()}';
+            </script>
+            <div id="disqus_thread"></div>
+            {literal}
+                <script type="text/javascript">
+                    var disqus_config = function ()
+                    {
+                        this.page.url = PAGE_URL;
+                        this.page.identifier = PAGE_IDENTIFIER;
+                    };
+                    (function ()
+                    {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://carlos-ferreira-blog.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            {/literal}
         </div>
     </div>
 {/block}

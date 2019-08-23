@@ -84,7 +84,7 @@ class BlogController extends Controller
 
 		$tpl->assign('published_date', $published_date);
 
-		$tpl->assign('page_title', $post->getHeadline() . ' blog post');
+		$tpl->assign('page_title', $post->getHeadline() . ' | Carlos.fyi Blog');
 
 		$tpl->display();
 	}

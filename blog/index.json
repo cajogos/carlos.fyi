@@ -1,7 +1,10 @@
 {
   "active": [
     {
-      "id": "hello-world"
+      "id": "nginx-cheat-sheet"
+    },
+    {
+      "id": "mysql-cheat-sheet"
     }
   ]
 }

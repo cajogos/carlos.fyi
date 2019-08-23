@@ -15,6 +15,7 @@ $handler->addRoute('GET', '/crypto', 'MainController::displayCryptocurrencies', 
 
 // Blog Routes
 $handler->addRoute('GET', '/blog', 'BlogController::displayBlogHome', 'blog-home');
+$handler->addRoute('GET', '/blog/feed', 'BlogController::displayBlogFeed', 'blog-feed');
 $handler->addRoute('GET', '/blog/author/[*:author_id]', 'BlogController::displayBlogAuthor', 'blog-author');
 $handler->addRoute('GET', '/blog/category/[*:category_id]', 'BlogController::displayBlogCategory', 'blog-category');
 $handler->addRoute('GET', '/blog/[*:post_id]', 'BlogController::displayBlogPost', 'blog-post');

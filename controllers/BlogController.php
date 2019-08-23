@@ -75,11 +75,28 @@ class BlogController extends Controller
 			}
 		}
 
+		$published_date = strtotime($post->getDatePublished());
+
 		$tpl = Template::create('blog/post.tpl');
 		$tpl->assign('post', $post);
-		$tpl->assign('authors', $post->getAuthors());
+		$tpl->assign('author', $post->getAuthor());
 		$tpl->assign('categories', $post->getCategories());
+
+		$tpl->assign('published_date', $published_date);
+
+		$tpl->assign('page_title', $post->getHeadline() . ' blog post');
+
 		$tpl->display();
+	}
+
+	public static function displayBlogFeed()
+	{
+		$posts = BlogHandler::getAllActivePosts();
+		$xml = BlogRSS::generateForPosts($posts);
+
+
+		echo $xml;
+		exit;
 	}
 
 	public static function sendToBlogHome()

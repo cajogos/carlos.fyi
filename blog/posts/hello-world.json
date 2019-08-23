@@ -1,12 +1,12 @@
 {
   "headline": "Hello World!",
   "description": "this is the hello world post!!",
-  "authors": [
-    "carlos-ferreira"
-  ],
-  "featuredImage": "https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-modern-technology-intelligent-ai-era-background-design-backgroundintelligent-ai-technologypsd-image_75384.jpg",
+  "author": "carlos-ferreira",
+  "featuredImage": "https://cdn.pixabay.com/photo/2018/08/18/13/26/interface-3614766_960_720.png",
   "categories": [
-    "cheat-sheets", "coding", "general"
+    "cheat-sheets",
+    "coding",
+    "general"
   ],
   "datePublished": "2019-08-15T22:53:00+00:00",
   "dateUpdated": "2019-08-15T22:53:00+00:00"

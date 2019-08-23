@@ -19,24 +19,29 @@
                 </ul>
             </div>
         </div>
-        <hr/>
-        <div class="row">
-            <div class="col-sm-6">
-                <img src="{$authors[0]->getAvatar()}" class="img-responsive" alt="{$authors[0]->getDisplayName()}">
-                {for $i = 0; $i < count($authors); $i++}
-                    <h3>{$authors[$i]->getDisplayName()}</h3>
-                {/for}
-            </div>
-            <div class="col-sm-6">
-                <h4>{$post->getDatePublished()}</h4>
+
+        <div class="post-author">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="author-avatar" style="background-image: url('{$author->getAvatar()}')"></div>
+                    <div class="author-name">
+                        <a href="{$author->getURL()}" title="See all posts by {$author->getDisplayName()}">
+                            {$author->getDisplayName()}
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <h4>{$published_date|date_format:"%B %e, %Y"}</h4>
+                </div>
             </div>
         </div>
 
-        <hr/>
-        <h1>Blog Post: {$post->getHeadline()} ({$post->getID()})</h1>
-        <h4>{$post->getURL()}</h4>
         <div class="post-content">
             {$post->getContent()}
+        </div>
+
+        <div class="post-comments">
+            <h3 class="text-center">Comments coming soon...</h3>
         </div>
     </div>
 {/block}

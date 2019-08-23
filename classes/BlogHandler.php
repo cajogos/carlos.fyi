@@ -30,10 +30,11 @@ class BlogHandler
 	private function __construct()
 	{
 		$this->files_location = $_SERVER['DOCUMENT_ROOT'] . '/../blog/';
+		$this->location_index = $this->files_location . 'index.json';
 		$this->location_authors = $this->files_location . 'authors/';
 		$this->location_categories = $this->files_location . 'categories/';
 		$this->location_posts = $this->files_location . 'posts/';
-		$this->location_content = $this->files_location . 'content/';
+		$this->location_content = $this->files_location . 'posts/content/';
 	}
 
 	/**
@@ -140,6 +141,31 @@ class BlogHandler
 	}
 
 	/**
+	 * @return array
+	 * @throws BlogHandlerException
+	 */
+	private function get_active_posts_ids()
+	{
+		$index = $this->get_index_data();
+		$active_ids = array();
+		foreach ($index['active'] as $active)
+		{
+			$active_ids[] = $active['id'];
+		}
+		$active_ids = array_unique($active_ids);
+		return $active_ids;
+	}
+
+	/**
+	 * @return array
+	 * @throws BlogHandlerException
+	 */
+	private function get_index_data()
+	{
+		return $this->get_json_data($this->location_index);
+	}
+
+	/**
 	 * @param {string} $author_id
 	 * @return BlogAuthor
 	 * @throws BlogHandlerException
@@ -184,5 +210,21 @@ class BlogHandler
 	{
 		$handler = self::get();
 		return $handler->get_post_content($post_id);
+	}
+
+	/**
+	 * @return BlogPost[]
+	 * @throws BlogHandlerException
+	 */
+	public static function getAllActivePosts()
+	{
+		$handler = self::get();
+		$active_posts_ids = $handler->get_active_posts_ids();
+		$active = array();
+		foreach ($active_posts_ids as $post_id)
+		{
+			$active[] = self::getBlogPostById($post_id);
+		}
+		return $active;
 	}
 }

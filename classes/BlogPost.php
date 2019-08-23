@@ -18,9 +18,9 @@ class BlogPost
 	private $description = null;
 
 	/**
-	 * @var array
+	 * @var string
 	 */
-	private $authors = array();
+	private $author = null;
 
 	/**
 	 * @var string
@@ -52,7 +52,7 @@ class BlogPost
 		$this->id = $post_id;
 		$this->headline = (string)$data['headline'];
 		$this->description = (string)$data['description'];
-		$this->authors = (array)$data['authors'];
+		$this->author = (string)$data['author'];
 		$this->featured_image = (string)$data['featuredImage'];
 		$this->categories = (array)$data['categories'];
 		$this->date_published = (string)$data['datePublished'];
@@ -87,17 +87,20 @@ class BlogPost
 	}
 
 	/**
-	 * @return BlogAuthor[]
+	 * @return string
+	 */
+	public function getDescription()
+	{
+		return $this->description;
+	}
+
+	/**
+	 * @return BlogAuthor
 	 * @throws BlogHandlerException
 	 */
-	public function getAuthors()
+	public function getAuthor()
 	{
-		$authors = array();
-		foreach ($this->authors as $author_id)
-		{
-			$authors[] = BlogHandler::getBlogAuthorById($author_id);
-		}
-		return $authors;
+		return BlogHandler::getBlogAuthorById($this->author);
 	}
 
 	/**

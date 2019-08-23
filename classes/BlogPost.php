@@ -186,5 +186,35 @@ class BlogPost
 		return BlogLink::getPostURL($this);
 	}
 
+	/**
+	 * @return string
+	 */
+	public function getLiveURL()
+	{
+		return BlogLink::getPostURL($this, true);
+	}
 
+	const SORT_ASC = 'ASC';
+	const SORT_DESC = 'DESC';
+
+	/**
+	 * @param BlogPost[] $posts
+	 * @param string $sort
+	 * @return BlogPost[]
+	 */
+	public static function sortByPublishedDate($posts, $sort = BlogPost::SORT_ASC)
+	{
+		usort($posts, function($a, $b) use ($sort)
+		{
+			$x = strtotime($a->getDatePublished());
+			$y = strtotime($b->getDatePublished());
+			if ($sort === BlogPost::SORT_ASC)
+			{
+				return ($x === $y) ? 0 : ($x < $y) ?  -1 : 1;
+			}
+			return ($x === $y) ? 0 : ($x > $y) ?  -1 : 1;
+		});
+
+		return $posts;
+	}
 }

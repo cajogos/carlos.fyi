@@ -43,7 +43,7 @@
         <div class="post-comments">
             <noscript>Please enable JavaScript to view the comments.</noscript>
             <script type="text/javascript">
-                var PAGE_URL = '{$post->getURL()}';
+                var PAGE_URL = '{$post->getLiveURL()}';
                 var PAGE_IDENTIFIER = '{$post->getDisqusID()}';
             </script>
             <div id="disqus_thread"></div>

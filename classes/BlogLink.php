@@ -3,39 +3,61 @@
 class BlogLink
 {
 	/**
+	 * @param bool $live
 	 * @return \Purl\Url
 	 */
-	private static function get_root_url()
+	private static function get_root_url($live = false)
 	{
-		$url = \Purl\Url::fromCurrent();
-		$host = $_SERVER['HTTP_HOST'];
-		if (strstr($host, ':') !== false)
+		if ($live === true)
 		{
-			$host = explode(':', $host, 2);
-			$url->set('port', $host[1]);
+			$url = \Purl\Url::parse('https://carlos.fyi/blog');
+			return $url;
 		}
+		else
+		{
+			$url = \Purl\Url::fromCurrent();
+			$host = $_SERVER['HTTP_HOST'];
+			if (strstr($host, ':') !== false)
+			{
+				$host = explode(':', $host, 2);
+				$url->set('port', $host[1]);
+			}
 
-		$url->path = null;
-		$url->path->add('blog');
-		return $url;
+			$url->path = null;
+			$url->path->add('blog');
+			return $url;
+		}
 	}
 
 	/**
+	 * @param bool $live
 	 * @return string
 	 */
-	public static function getHomeURL()
+	public static function getHomeURL($live = false)
 	{
-		$url = self::get_root_url();
+		$url = self::get_root_url($live);
+		return $url->getUrl();
+	}
+
+	/**
+	 * @param bool $live
+	 * @return string
+	 */
+	public static function getFeedURL($live = false)
+	{
+		$url = self::get_root_url($live);
+		$url->path->add('feed');
 		return $url->getUrl();
 	}
 
 	/**
 	 * @param BlogPost $post
+	 * @param bool $live
 	 * @return string
 	 */
-	public static function getPostURL(BlogPost $post)
+	public static function getPostURL(BlogPost $post, $live = false)
 	{
-		$url = self::get_root_url();
+		$url = self::get_root_url($live);
 		$url->path->add($post->getID());
 		return $url->getUrl();
 	}

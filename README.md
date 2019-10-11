@@ -37,6 +37,6 @@ I would like to thank (yes, I am aware I am also thanking myself) the people bel
 
 Erm, well... This is my personal website. Feel free to fork it and change it around to make it your own. However, remember to credit whenever possible :) Also, if you found a typo or spelling mistake you can either tweet at me [@Carlos_Tweets](https://twitter.com/carlos_tweets) or create a pull request, thank you!
 
-> _You are awesome!_ 
+> _You are awesome!_
 
 **Carlos F.**

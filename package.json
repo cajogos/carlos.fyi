@@ -1,7 +1,7 @@
 {
   "name": "carlos.fyi",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2021.10.1",
+  "description": "Official repository for Carlos.fyi website and blog.",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,15 +14,23 @@
     "url": "git+https://github.com/cajogos/carlos.fyi.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Carlos Ferreira",
+    "email": "c@rlos.rocks",
+    "url": "https://carlos.fyi"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cajogos/carlos.fyi/issues"
   },
-  "homepage": "https://github.com/cajogos/carlos.fyi#readme",
+  "homepage": "https://carlos.fyi",
   "dependencies": {
     "next": "^11.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.30",
+    "typescript": "^4.4.4"
   }
 }

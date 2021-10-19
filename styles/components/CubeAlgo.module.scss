@@ -1,0 +1,88 @@
+$spacing: 1rem;
+$inner-height: 28px;
+
+$color-clockwise: lime;
+$color-counter-clockwise: red;
+
+.move {
+    font-family: monospace;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 15px;
+    background: black;
+    color: white;
+    margin: 5px;
+}
+
+.rowTop,
+.rowBottom {
+    width: inherit;
+    height: $spacing;
+    line-height: $spacing;
+    vertical-align: middle;
+}
+
+.rowMiddle {
+    line-height: $inner-height;
+    height: $inner-height;
+    font-weight: bold;
+
+    .colLeft,
+    .colRight,
+    .colText {
+        vertical-align: middle;
+        display: inline-block;
+        line-height: inherit;
+        height: inherit;
+    }
+
+    .colLeft,
+    .colRight {
+        width: $spacing;
+    }
+
+    .colText {
+        border: 2px inset;
+        font-family: monospace;
+        background: white;
+        text-align: center;
+        color: black;
+        width: $inner-height;
+    }
+}
+
+.rotation-U {
+    background: darkorange;
+}
+
+.rotation-D {
+    background: darkred;
+}
+
+.rotation-F {
+    background: black;
+    color: white;
+}
+
+.rotation-B {
+    background: yellow;
+    color: black;
+}
+
+.rotation-R {
+    background: darkblue;
+}
+
+.rotation-L {
+    background: darkgreen;
+}
+
+.direction-CLOCKWISE {
+    box-shadow: 0 0 5px 2px $color-clockwise;
+    border: 2px solid $color-clockwise;
+}
+
+.direction-COUNTERCLOCKWISE {
+    box-shadow: 0 0 5px 2px $color-counter-clockwise;
+    border: 2px solid $color-counter-clockwise;
+}

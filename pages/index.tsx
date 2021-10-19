@@ -67,7 +67,4 @@ export default function Index()
     );
 };
 
-Index.getLayout = (page: ReactElement) =>
-{
-    return <MainLayout>{page}</MainLayout>;
-};
+Index.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;

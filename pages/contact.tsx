@@ -49,9 +49,6 @@ export default function Contact()
     );
 };
 
-Contact.getLayout = (page: ReactElement) =>
-{
-    return <MainLayout>{page}</MainLayout>;
-};
+Contact.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 Contact.getPageTitle = (): string => 'Get In Touch';

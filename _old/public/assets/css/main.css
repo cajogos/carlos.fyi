@@ -16,9 +16,3 @@ button.toggle-button:hover {
 	opacity: 1;
 }
 
-/* SKILL PAGE */
-h2.skill-title {}
-h2.skill-title i.fa {
-	text-align: center;
-	width: 45px;
-}

@@ -19,9 +19,9 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout)
     const getLayout = Component.getLayout || (page => page);
 
     // Custom page titles can be defined using getPageTitle
-    let pageTitle = Component.getPageTitle || '';
-    pageTitle = pageTitle ?
-        `${pageTitle} | Carlos Ferreira - All Things Developer from London` :
+    let getPageTitle = Component.getPageTitle || (() => '');
+    let pageTitle: string = getPageTitle().length > 0 ?
+        `${getPageTitle()} | Carlos Ferreira - All Things Developer from London` :
         'Carlos Ferreira - All Things Developer from London';
 
     return getLayout(

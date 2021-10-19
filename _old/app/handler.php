@@ -10,8 +10,6 @@ $handler->addRoute('GET', '/timeline', 'MainController::displayTimeline', 'timel
 
 // Other Routes
 $handler->addRoute('GET', '/rubiks-cube', 'MainController::displayRubiksCube', 'rubiks-cube');
-$handler->addRoute('GET', '/minesweeper', 'MainController::displayMinesweeper', 'minesweeper');
-$handler->addRoute('GET', '/crypto', 'MainController::displayCryptocurrencies', 'crypto');
 
 // Blog Routes
 $handler->addRoute('GET', '/blog', 'BlogController::displayBlogHome', 'blog-home');

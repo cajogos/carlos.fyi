@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react';
 
-import { FaSuperpowers, FaGraduationCap, FaMicrochip, FaBug, FaDatabase, FaTablet, FaSitemap } from 'react-icons/fa';
+import { FaSuperpowers, FaGraduationCap, FaMicrochip, FaBug, FaDatabase, FaTabletAlt, FaSitemap } from 'react-icons/fa';
 
 import MainLayout from '../layouts/Main';
 
@@ -59,7 +59,7 @@ export default function Skills()
             <div className="row">
                 <div className="col">
                     <h2>
-                        <FaTablet className={PageStyles.titleIcon} /> Mobile Enthusiast
+                        <FaTabletAlt className={PageStyles.titleIcon} /> Mobile Enthusiast
                     </h2>
                     <p>One of my hobbies is mobile app development. Having published a few apps in the past.</p>
                     <p>The concept of a native app shines bright to me. Although, I am a Web Application Developer at heart I do consider the benefits of building a native mobile application to better gain use of these amazing devices we have in our pockets.</p>

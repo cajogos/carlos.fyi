@@ -1,10 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-	{* <title>{$page_title|default:'NO TITLE FIX THIS!'} | Carlos Ferreira - All Things Developer from London</title> *}
-
-	{* <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> *}
-	{* <meta name="viewport" content="width=device-width, initial-scale=1.0"> *}
 
 	<!-- Open Graph Tags -->
 	<meta property="og:type" content="profile" />
@@ -24,16 +20,9 @@
 	<meta name="twitter:image" content="https://carlos.fyi/assets/imgs/fb_share_img.png">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="/assets/css/slideout.css" />
 	<link rel="stylesheet" href="/assets/css/main.css" />
-
-	<!-- JavaScript -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript" src="/assets/js/main.js"></script>
-
+{*
 	{literal}
 	<script type="text/javascript">
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,7 +32,7 @@
 		ga('create', 'UA-17954862-6', 'auto');
 		ga('send', 'pageview');
 	</script>
-	{/literal}
+	{/literal} *}
 
 	{block name=head}{/block}
 </head>
@@ -57,9 +46,9 @@
 
 		<div class="container">
 			{block name=body}{/block}
-			<div class="site-footer">
+			{* <div class="site-footer">
 				<p><a title="FYI That's me :)" href="https://carlos.fyi/">carlos.fyi</a> &copy; {date('Y')}</p>
-			</div>
+			</div> *}
 		</div>
 	</div>
 

@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>{$page_title|default:'NO TITLE FIX THIS!'} | Carlos Ferreira - All Things Developer from London</title>
+	{* <title>{$page_title|default:'NO TITLE FIX THIS!'} | Carlos Ferreira - All Things Developer from London</title> *}
 
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{* <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /> *}
+	{* <meta name="viewport" content="width=device-width, initial-scale=1.0"> *}
 
 	<!-- Open Graph Tags -->
 	<meta property="og:type" content="profile" />
@@ -48,9 +48,9 @@
 	{block name=head}{/block}
 </head>
 <body>
-	<div id="navigation-menu" style="display: none">
+	{* <div id="navigation-menu" style="display: none">
 		{include file="partials/slideout-navbar.tpl"}
-	</div>
+	</div> *}
 
 	<div id="website-content">
 		<button class="toggle-button"><i class="fa fa-bars"></i></button>

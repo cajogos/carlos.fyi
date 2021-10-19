@@ -6,9 +6,7 @@ export default function Footer()
 
     return (
         <div className={ComponentStyles.footer}>
-            <p>
-                <a title="FYI That's me :)" href="https://carlos.fyi/">carlos.fyi</a> &copy; {curYear}
-            </p>
+            carlos.fyi &copy; {curYear}
         </div>
     );
 }

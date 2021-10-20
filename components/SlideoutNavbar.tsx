@@ -4,8 +4,12 @@ import { FaCube, FaHeart, FaEnvelope } from 'react-icons/fa';
 
 import ComponentStyles from '../styles/components/SlideoutNavbar.module.scss';
 
-export default function SlideoutNavbar()
+export default function SlideoutNavbar({ isOpen })
 {
+    if (!isOpen)
+    {
+        return <></>;
+    }
     return (
         <div className={ComponentStyles.menu}>
             <Link href="/">

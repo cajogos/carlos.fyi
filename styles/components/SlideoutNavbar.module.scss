@@ -1,70 +1,121 @@
 @import '../variables';
 
-.menu {
-    background: #222;
-    color: #EEE;
-}
-
-.title {
-    transition: opacity 0.5s;
-    margin: 12px 0 20px 0;
-    text-align: center;
-    font-weight: 300;
-    cursor: pointer;
-    font-size: 34px;
-    color: $cajogos-blue;
-    opacity: 0.8;
-
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.header,
-.link {
-    text-transform: uppercase;
-    padding: 8px 12px;
-    font-size: 10px;
-    cursor: default;
+.navigation {
     display: block;
-    margin: 0;
-}
-
-.header {
-    border-bottom: 1px solid #555;
-    border-top: 1px solid #555;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #EAEAEA;
-}
-
-.link {
-    transition: all 0.4s;
-    font-size: 12px;
-    margin-top: 4px;
-    color: #AAA;
-
-    &:hover {
-        text-shadow: 0 0 1px #FFF;
-        text-decoration: none;
-        cursor: pointer;
-        color: #FFF;
-    }
-}
-
-.footer {
-    border-top: 3px double #555;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 90px;
-    margin-top: 40px;
-    padding: 25px;
-    text-align: center;
-    font-size: 10px;
-    color: #888;
+    @media screen and (max-width: 752px) {
+        background-color: #FFF;
+    }
+    .navbar {
+        display: block;
+        position: relative;
+        z-index: 101;
+        width: 100%;
+        .hamburger {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 25px;
+            padding: 15px;
+            color: #222;
+            transition: color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+        }
+        .hamburgerOpen {
+            color: #FFF;
+        }
+    }
+    .menu {
+        display: block;
+        position: absolute;
+        background: #222;
+        color: #EEE;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+        transition: left 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+        @media screen and (max-width: 752px) {
+            width: 100%;
+            left: -100vw;
+        }
+        &.open {
+            left: 0;
+        }
+        .title {
+            transition: opacity 0.5s;
+            margin: 12px 0 20px 0;
+            text-align: center;
+            font-weight: 300;
+            cursor: pointer;
+            font-size: 34px;
+            color: $cajogos-blue;
+            opacity: 0.8;
+        
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .header,
+        .link {
+            text-transform: uppercase;
+            padding: 8px 12px;
+            font-size: 10px;
+            cursor: default;
+            display: block;
+            margin: 0;
+        }
 
-    p {
-        margin: 0 0 5px 0;
-        cursor: default;
+        .header {
+            border-bottom: 1px solid #555;
+            border-top: 1px solid #555;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #EAEAEA;
+        }
+
+        .link {
+            transition: all 0.4s;
+            font-size: 12px;
+            margin-top: 4px;
+            color: #AAA;
+
+            &:hover {
+                text-shadow: 0 0 1px #FFF;
+                text-decoration: none;
+                cursor: pointer;
+                color: #FFF;
+            }
+        }
+
+        .footer {
+            border-top: 3px double #555;
+            width: 100%;
+            height: 90px;
+            margin-top: 40px;
+            padding: 25px;
+            text-align: center;
+            font-size: 10px;
+            color: #888;
+
+            p {
+                margin: 0 0 5px 0;
+                cursor: default;
+            }
+        }
+    }
+    .menuOpen {
+        left: 0;
     }
 }
+
+
+
+
+

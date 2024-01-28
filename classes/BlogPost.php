@@ -208,11 +208,10 @@ class BlogPost
 		{
 			$x = strtotime($a->getDatePublished());
 			$y = strtotime($b->getDatePublished());
-			if ($sort === BlogPost::SORT_ASC)
-			{
-				return ($x === $y) ? 0 : ($x < $y) ?  -1 : 1;
+			if ($sort === BlogPost::SORT_ASC) {
+				return ($x === $y) ? 0 : (($x < $y) ? -1 : 1);
 			}
-			return ($x === $y) ? 0 : ($x > $y) ?  -1 : 1;
+			return ($x === $y) ? 0 : (($x > $y) ? -1 : 1);
 		});
 
 		return $posts;

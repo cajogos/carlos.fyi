@@ -26,8 +26,8 @@
 	<h2>2017</h2>
 	<ul>
 		<li><strong>Oct:</strong> Became Senior Developer at <a href="http://www.advfn.com" target="_blank">ADVFN Plc</a>.</li>
-		<li><strong>Jun:</strong> Got involved with <a href="/crypto">Cryptocurrencies</a>.</li>
-		<li><strong>Apr:</strong> Officially released my own PHP Framework called <a href="https://biscuit.link" target="_blank">Biscuit Link</a>.</li>
+		<li><strong>Jun:</strong> Got involved with Cryptocurrencies.
+		<li><strong>Apr:</strong> Officially released my own PHP Framework called <a href="https://github.com/cajogos/biscuit-link" target="_blank">Biscuit Link</a>.</li>
 		<li><strong>Jan:</strong> Launched this website and the new <a href="/">carlos.fyi</a> brand.</li>
 		<li><strong>Jan:</strong> Became head of development for the new CoderDojo London website (now gone).</li>
 	</ul>

@@ -26,20 +26,12 @@
 					<a href="mailto:c@rlos.rocks">c@rlos.rocks</a>
 				</h4>
 				<h4>
-					...give me a <i class="fa fa-phone" title="phone call"></i>?<br />
-					<a href="tel:+447779527412">(+44) 777 9527 412</a>
-				</h4>
-				<h4>
 					...connect with me on <i class="fa fa-linkedin-square" title="LinkedIn"></i>?<br />
 					<a href="https://www.linkedin.com/in/cajogos" target="_blank">Carlos Ferreira</a>
 				</h4>
 				<h4>
 					...follow me on <i class="fa fa-twitter" title="Twitter"></i>?<br />
-					<a href="https://twitter.com/carlos_tweets" target="_blank">@Carlos_Tweets</a>
-				</h4>
-				<h4>
-					...chat to me on <i class="fa fa-skype" title="Skype"></i>?<br />
-					<a href="skype:cajogos?chat" target="_blank">cajogos</a>
+					<a href="https://twitter.com/cajogos" target="_blank">@cajogos</a>
 				</h4>
 			</div>
 		</div>

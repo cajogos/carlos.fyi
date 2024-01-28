@@ -28,10 +28,9 @@
 			<p>Drink <em>at least</em> a cup of coffee a day.</p>
 			<p>I like to write and contribute to <a href="https://github.com/cajogos" title="See my Github contributions." target="_blank">open-source code</a>.</p>
 			<p>I created a <a href="https://packagist.org/packages/cajogos/php-temp-cache" title="PHP TempCache" target="_blank">PHP Caching Library</a>.</p>
-			<p>I have my own <a href="https://biscuit.link" title="Biscuit Link - PHP Framework for Everyone" target="_blank">PHP framework</a>, deeply inspired in my love for biscuits.</p>
+			<p>I have my own <a href="https://github.com/cajogos/biscuit-link" title="Biscuit Link - PHP Framework for Everyone" target="_blank">PHP framework</a>, deeply inspired in my love for biscuits.</p>
 			<p>Oh and a <a href="https://github.com/cajogos/seesaw" title="SEESAW JS - Always running web applications." target="_blank">JavaScript framework</a> for always running web applications.</p>
 			<p>I often complain about my commute and life biggest questions <a href="https://twitter.com/carlos_tweets" title="Follow Carlos Ferreira on Twitter." target="_blank">on my Twitter account</a>.</p>
-			<p>I have an obsession with cryptocurrencies, check out <a href="/crypto" title="View my cryptocurrency stats.">what I am HODLing</a>.</p>
 			<p>I've been a Lead Mentor, <a href="https://www.instagram.com/p/BL4GdOKh0z6/" target="_blank">International Speaker</a>, and Content Creator for <a href="https://coderdojo.com" target="_blank">CoderDojo</a> since May 2013.</p>
 
 			<div class="row">

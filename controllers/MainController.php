@@ -55,4 +55,43 @@ class MainController extends Controller
 		$tpl->assign('social_desc', 'Learn how to solve the Rubik\'s Cube with the most simplified guide.');
 		$tpl->display();
 	}
+
+	public static function displayMinesweeper()
+	{
+		$tpl = Template::create('pages/minesweeper.tpl');
+		$tpl->assign('page_title', 'Play Minesweeper in your browser');
+		$tpl->assign('page_id', 'minesweeper');
+		$tpl->assign('social_title', 'Minesweeper in your Browser for Free | Carlos Ferreira');
+		$tpl->assign('social_desc', 'Name is Carlos and I like making things. Check out my website to know what I can do.');
+		$tpl->display();
+	}
+
+	public static function displayCryptocurrencies()
+	{
+		$tpl = Template::create('pages/crypto.tpl');
+		$tpl->assign('page_title', 'Everyday I am HODLing');
+		$tpl->assign('page_id', 'crypto');
+		$tpl->assign('social_title', 'Cryptocurrencies | Carlos Ferreira - All Crypto HODLer from London');
+		$tpl->assign('social_desc', 'Name is Carlos and I like HODLing on to things.');
+
+		$bitcoin = CoinGeckoAPI::getCoinInfo('bitcoin');
+		$tpl->assign('bitcoin', $bitcoin);
+
+		$ethereum = CoinGeckoAPI::getCoinInfo('ethereum');
+		$tpl->assign('ethereum', $ethereum);
+
+		$litecoin = CoinGeckoAPI::getCoinInfo('litecoin');
+		$tpl->assign('litecoin', $litecoin);
+
+		$dogecoin = CoinGeckoAPI::getCoinInfo('dogecoin');
+		$tpl->assign('dogecoin', $dogecoin);
+
+		$plusonecoin = CoinGeckoAPI::getCoinInfo('plusonecoin');
+		$tpl->assign('plusonecoin', $plusonecoin);
+
+		$brazio = CoinGeckoAPI::getCoinInfo('brazio');
+		$tpl->assign('brazio', $brazio);
+
+		$tpl->display();
+	}
 }

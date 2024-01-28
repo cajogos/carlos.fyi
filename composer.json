@@ -1,0 +1,7 @@
+{
+  "require": {
+    "cajogos/biscuit-link-framework": "0.5",
+    "ext-json": "*",
+    "jwage/purl": "^1.0"
+  }
+}

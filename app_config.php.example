@@ -1,9 +1,0 @@
-<?php
-
-// FLICKR API
-define('FLICKR_API_KEY', '');
-define('FLICKR_CLIENT_SECRET', '');
-
-// GITHUB API
-define('GITHUB_CLIENT_ID', '');
-define('GITHUB_CLIENT_SECRET', '');

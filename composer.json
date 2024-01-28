@@ -1,7 +1,12 @@
 {
   "require": {
-    "cajogos/biscuit-link-framework": "0.5",
+    "php": "^8.1",
+    "smarty/smarty": "^4.0.0",
+    "guzzlehttp/guzzle": "~6.0",
+    "altorouter/altorouter": "^2.0",
+    "cajogos/php-temp-cache": "1.1",
+    "erusev/parsedown": "^1.0",
     "ext-json": "*",
-    "jwage/purl": "^1.0"
+    "league/uri-components": "^7.0"
   }
 }

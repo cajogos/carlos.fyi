@@ -1,7 +1,7 @@
 <?php
 
-use \Cajogos\Biscuit\Controller as Controller;
-use \Cajogos\Biscuit\Template as Template;
+use BaseController as Controller;
+use BaseTemplate as Template;
 
 class MainController extends Controller
 {

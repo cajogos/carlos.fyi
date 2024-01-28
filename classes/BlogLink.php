@@ -1,30 +1,26 @@
 <?php
 
+use League\Uri\Components\HierarchicalPath;
+use League\Uri\Exceptions\SyntaxError;
+use League\Uri\Uri;
+
 class BlogLink
 {
 	/**
 	 * @param bool $live
-	 * @return \Purl\Url
+	 * @return Uri
+	 * @throws SyntaxError
 	 */
 	private static function get_root_url($live = false)
 	{
 		if ($live === true)
 		{
-			$url = \Purl\Url::parse('https://carlos.fyi/blog');
+			$url = Uri::new('https://carlos.fyi/blog');
 			return $url;
 		}
 		else
 		{
-			$url = \Purl\Url::fromCurrent();
-			$host = $_SERVER['HTTP_HOST'];
-			if (strstr($host, ':') !== false)
-			{
-				$host = explode(':', $host, 2);
-				$url->set('port', $host[1]);
-			}
-
-			$url->path = null;
-			$url->path->add('blog');
+			$url = Uri::new("http://{$_SERVER['HTTP_HOST']}/blog");
 			return $url;
 		}
 	}
@@ -35,8 +31,7 @@ class BlogLink
 	 */
 	public static function getHomeURL($live = false)
 	{
-		$url = self::get_root_url($live);
-		return $url->getUrl();
+		return (string) self::get_root_url($live);
 	}
 
 	/**
@@ -46,8 +41,9 @@ class BlogLink
 	public static function getFeedURL($live = false)
 	{
 		$url = self::get_root_url($live);
-		$url->path->add('feed');
-		return $url->getUrl();
+		$url = $url->withPath(HierarchicalPath::fromUri($url)
+			->append('feed'));
+		return (string) $url;
 	}
 
 	/**
@@ -58,8 +54,9 @@ class BlogLink
 	public static function getPostURL(BlogPost $post, $live = false)
 	{
 		$url = self::get_root_url($live);
-		$url->path->add($post->getID());
-		return $url->getUrl();
+		$url = $url->withPath(HierarchicalPath::fromUri($url)
+			->append($post->getID()));
+		return (string) $url;
 	}
 
 	/**
@@ -69,8 +66,10 @@ class BlogLink
 	public static function getCategoryURL(BlogCategory $category)
 	{
 		$url = self::get_root_url();
-		$url->path->add('category')->add($category->getID());
-		return $url->getUrl();
+		$url = $url->withPath(HierarchicalPath::fromUri($url)
+			->append('category')
+			->append($category->getID()));
+		return (string) $url;
 	}
 
 	/**
@@ -80,7 +79,9 @@ class BlogLink
 	public static function getAuthorURL(BlogAuthor $author)
 	{
 		$url = self::get_root_url();
-		$url->path->add('author')->add($author->getID());
-		return $url->getUrl();
+		$url = $url->withPath(HierarchicalPath::fromUri($url)
+			->append('author')
+			->append($author->getID()));
+		return (string) $url;
 	}
 }

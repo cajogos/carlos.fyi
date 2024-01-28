@@ -4,24 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f7cb904e6cd4571bdfa8dcdf1c47590",
+    "content-hash": "c544d5183d92eb1be1a28cb3fed747f1",
     "packages": [
         {
             "name": "altorouter/altorouter",
-            "version": "v1.1.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dannyvankooten/AltoRouter.git",
-                "reference": "09d9d946c546bae6d22a7654cdb3b825ffda54b4"
+                "reference": "f6fede4f94ced7c22ba63a9b8af0bf2dc38e3cb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dannyvankooten/AltoRouter/zipball/09d9d946c546bae6d22a7654cdb3b825ffda54b4",
-                "reference": "09d9d946c546bae6d22a7654cdb3b825ffda54b4",
+                "url": "https://api.github.com/repos/dannyvankooten/AltoRouter/zipball/f6fede4f94ced7c22ba63a9b8af0bf2dc38e3cb2",
+                "reference": "f6fede4f94ced7c22ba63a9b8af0bf2dc38e3cb2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "phpunit/phpunit": "5.7.*",
+                "squizlabs/php_codesniffer": "3.4.2"
             },
             "type": "library",
             "autoload": {
@@ -57,62 +62,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dannyvankooten/AltoRouter/issues",
-                "source": "https://github.com/dannyvankooten/AltoRouter/tree/master"
+                "source": "https://github.com/dannyvankooten/AltoRouter/tree/2.0.2"
             },
-            "time": "2014-04-16T09:44:40+00:00"
-        },
-        {
-            "name": "cajogos/biscuit-link-framework",
-            "version": "v0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cajogos/biscuit-link-framework.git",
-                "reference": "042f321a56e23f8560bf83af9f1e6054877f2896"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cajogos/biscuit-link-framework/zipball/042f321a56e23f8560bf83af9f1e6054877f2896",
-                "reference": "042f321a56e23f8560bf83af9f1e6054877f2896",
-                "shasum": ""
-            },
-            "require": {
-                "altorouter/altorouter": "1.1.0",
-                "cajogos/php-temp-cache": "1.1",
-                "erusev/parsedown": "1.6.2",
-                "guzzlehttp/guzzle": "~6.0",
-                "php": ">=5.5.0",
-                "smarty/smarty": "~3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Carlos Ferreira",
-                    "email": "c@rlos.rocks",
-                    "homepage": "https://carlos.fyi"
-                }
-            ],
-            "description": "Set of classes used for Biscuit Link PHP Framework.",
-            "homepage": "https://biscuit.link",
-            "keywords": [
-                "biscuit",
-                "elements",
-                "framework",
-                "templating"
-            ],
-            "support": {
-                "issues": "https://github.com/cajogos/biscuit-link-framework/issues",
-                "source": "https://github.com/cajogos/biscuit-link-framework/tree/master"
-            },
-            "time": "2017-07-29T12:29:54+00:00"
+            "time": "2020-03-09T08:34:59+00:00"
         },
         {
             "name": "cajogos/php-temp-cache",
@@ -163,20 +115,24 @@
         },
         {
             "name": "erusev/parsedown",
-            "version": "1.6.2",
+            "version": "1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "1bf24f7334fe16c88bf9d467863309ceaf285b01"
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/1bf24f7334fe16c88bf9d467863309ceaf285b01",
-                "reference": "1bf24f7334fe16c88bf9d467863309ceaf285b01",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
                 "shasum": ""
             },
             "require": {
+                "ext-mbstring": "*",
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
             },
             "type": "library",
             "autoload": {
@@ -203,9 +159,9 @@
             ],
             "support": {
                 "issues": "https://github.com/erusev/parsedown/issues",
-                "source": "https://github.com/erusev/parsedown/tree/master"
+                "source": "https://github.com/erusev/parsedown/tree/1.7.x"
             },
-            "time": "2017-03-29T16:04:15+00:00"
+            "time": "2019-12-30T22:54:17+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -507,27 +463,278 @@
             "time": "2023-04-17T16:00:37+00:00"
         },
         {
-            "name": "jwage/purl",
-            "version": "v1.0.0",
+            "name": "league/uri",
+            "version": "7.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jwage/purl.git",
-                "reference": "3113451ca729741dd9454274216d253d57814cac"
+                "url": "https://github.com/thephpleague/uri.git",
+                "reference": "bf414ba956d902f5d98bf9385fcf63954f09dce5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jwage/purl/zipball/3113451ca729741dd9454274216d253d57814cac",
-                "reference": "3113451ca729741dd9454274216d253d57814cac",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/bf414ba956d902f5d98bf9385fcf63954f09dce5",
+                "reference": "bf414ba956d902f5d98bf9385fcf63954f09dce5",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2"
+                "league/uri-interfaces": "^7.3",
+                "php": "^8.1"
             },
-            "require-dev": {
-                "doctrine/coding-standard": "^6.0",
-                "phpstan/phpstan": "^0.11.5",
-                "phpstan/phpstan-strict-rules": "^0.11.0",
-                "phpunit/phpunit": "^8.1"
+            "conflict": {
+                "league/uri-schemes": "^1.0"
+            },
+            "suggest": {
+                "ext-bcmath": "to improve IPV4 host parsing",
+                "ext-fileinfo": "to create Data URI from file contennts",
+                "ext-gmp": "to improve IPV4 host parsing",
+                "ext-intl": "to handle IDN host with the best performance",
+                "jeremykendall/php-domain-parser": "to resolve Public Suffix and Top Level Domain",
+                "league/uri-components": "Needed to easily manipulate URI objects components",
+                "php-64bit": "to improve IPV4 host parsing",
+                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI manipulation library",
+            "homepage": "https://uri.thephpleague.com",
+            "keywords": [
+                "data-uri",
+                "file-uri",
+                "ftp",
+                "hostname",
+                "http",
+                "https",
+                "middleware",
+                "parse_str",
+                "parse_url",
+                "psr-7",
+                "query-string",
+                "querystring",
+                "rfc3986",
+                "rfc3987",
+                "rfc6570",
+                "uri",
+                "uri-template",
+                "url",
+                "ws"
+            ],
+            "support": {
+                "docs": "https://uri.thephpleague.com",
+                "forum": "https://thephpleague.slack.com",
+                "issues": "https://github.com/thephpleague/uri-src/issues",
+                "source": "https://github.com/thephpleague/uri/tree/7.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-12-01T06:24:25+00:00"
+        },
+        {
+            "name": "league/uri-components",
+            "version": "7.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-components.git",
+                "reference": "9b710019639c1a37692c86159f134a8a6c11de0f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-components/zipball/9b710019639c1a37692c86159f134a8a6c11de0f",
+                "reference": "9b710019639c1a37692c86159f134a8a6c11de0f",
+                "shasum": ""
+            },
+            "require": {
+                "league/uri": "^7.3",
+                "php": "^8.1"
+            },
+            "suggest": {
+                "ext-bcmath": "to improve IPV4 host parsing",
+                "ext-fileinfo": "to create Data URI from file contennts",
+                "ext-gmp": "to improve IPV4 host parsing",
+                "ext-intl": "to handle IDN host with the best performance",
+                "ext-mbstring": "to use the sorting algorithm of URLSearchParams",
+                "jeremykendall/php-domain-parser": "to resolve Public Suffix and Top Level Domain",
+                "php-64bit": "to improve IPV4 host parsing",
+                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI components manipulation library",
+            "homepage": "http://uri.thephpleague.com",
+            "keywords": [
+                "authority",
+                "components",
+                "fragment",
+                "host",
+                "middleware",
+                "modifier",
+                "path",
+                "port",
+                "query",
+                "rfc3986",
+                "scheme",
+                "uri",
+                "url",
+                "userinfo"
+            ],
+            "support": {
+                "docs": "https://uri.thephpleague.com",
+                "forum": "https://thephpleague.slack.com",
+                "issues": "https://github.com/thephpleague/uri-src/issues",
+                "source": "https://github.com/thephpleague/uri-components/tree/7.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-12-01T06:24:25+00:00"
+        },
+        {
+            "name": "league/uri-interfaces",
+            "version": "7.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-interfaces.git",
+                "reference": "bd8c487ec236930f7bbc42b8d374fa882fbba0f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/bd8c487ec236930f7bbc42b8d374fa882fbba0f3",
+                "reference": "bd8c487ec236930f7bbc42b8d374fa882fbba0f3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-filter": "*",
+                "php": "^8.1",
+                "psr/http-factory": "^1",
+                "psr/http-message": "^1.1 || ^2.0"
+            },
+            "suggest": {
+                "ext-bcmath": "to improve IPV4 host parsing",
+                "ext-gmp": "to improve IPV4 host parsing",
+                "ext-intl": "to handle IDN host with the best performance",
+                "php-64bit": "to improve IPV4 host parsing",
+                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "Common interfaces and classes for URI representation and interaction",
+            "homepage": "https://uri.thephpleague.com",
+            "keywords": [
+                "data-uri",
+                "file-uri",
+                "ftp",
+                "hostname",
+                "http",
+                "https",
+                "parse_str",
+                "parse_url",
+                "psr-7",
+                "query-string",
+                "querystring",
+                "rfc3986",
+                "rfc3987",
+                "rfc6570",
+                "uri",
+                "url",
+                "ws"
+            ],
+            "support": {
+                "docs": "https://uri.thephpleague.com",
+                "forum": "https://thephpleague.slack.com",
+                "issues": "https://github.com/thephpleague/uri-src/issues",
+                "source": "https://github.com/thephpleague/uri-interfaces/tree/7.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-11-24T15:40:42+00:00"
+        },
+        {
+            "name": "psr/http-factory",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
+                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
             "extra": {
@@ -537,7 +744,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Purl\\": "src/Purl"
+                    "Psr\\Http\\Message\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -546,21 +753,25 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan H. Wage",
-                    "email": "jonwage@gmail.com"
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "URL Manipulation for PHP 5.3",
-            "homepage": "http://github.com/jwage/purl",
+            "description": "Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
-                "manipulation",
-                "url"
+                "factory",
+                "http",
+                "message",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
             ],
             "support": {
-                "issues": "https://github.com/jwage/purl/issues",
-                "source": "https://github.com/jwage/purl/tree/v1.0.0"
+                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
             },
-            "time": "2019-04-11T18:45:04+00:00"
+            "time": "2023-04-10T20:10:41+00:00"
         },
         {
             "name": "psr/http-message",
@@ -661,29 +872,29 @@
         },
         {
             "name": "smarty/smarty",
-            "version": "v3.1.48",
+            "version": "v4.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/smarty-php/smarty.git",
-                "reference": "2fc443806cdcaee4441be4d0bb09f8fa56a17f2c"
+                "reference": "e0cbbdf6ea21768d0194e59d2f8c2e20d5f0868c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/2fc443806cdcaee4441be4d0bb09f8fa56a17f2c",
-                "reference": "2fc443806cdcaee4441be4d0bb09f8fa56a17f2c",
+                "url": "https://api.github.com/repos/smarty-php/smarty/zipball/e0cbbdf6ea21768d0194e59d2f8c2e20d5f0868c",
+                "reference": "e0cbbdf6ea21768d0194e59d2f8c2e20d5f0868c",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.2 || ^7.0"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.5 || ^6.5 || ^5.7 || ^4.8",
+                "phpunit/phpunit": "^8.5 || ^7.5",
                 "smarty/smarty-lexer": "^3.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "4.0.x-dev"
                 }
             },
             "autoload": {
@@ -707,20 +918,23 @@
                 {
                     "name": "Rodney Rehm",
                     "email": "rodney.rehm@medialize.de"
+                },
+                {
+                    "name": "Simon Wisselink",
+                    "homepage": "https://www.iwink.nl/"
                 }
             ],
             "description": "Smarty - the compiling PHP template engine",
-            "homepage": "http://www.smarty.net",
+            "homepage": "https://smarty-php.github.io/smarty/",
             "keywords": [
                 "templating"
             ],
             "support": {
-                "forum": "http://www.smarty.net/forums/",
-                "irc": "irc://irc.freenode.org/smarty",
+                "forum": "https://github.com/smarty-php/smarty/discussions",
                 "issues": "https://github.com/smarty-php/smarty/issues",
-                "source": "https://github.com/smarty-php/smarty/tree/v3.1.48"
+                "source": "https://github.com/smarty-php/smarty/tree/v4.3.5"
             },
-            "time": "2023-03-28T19:45:54+00:00"
+            "time": "2024-01-23T10:47:54+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
@@ -977,6 +1191,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
+        "php": "^8.1",
         "ext-json": "*"
     },
     "platform-dev": [],

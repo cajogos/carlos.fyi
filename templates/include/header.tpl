@@ -8,8 +8,8 @@
 
 	<!-- Open Graph Tags -->
 	<meta property="og:type" content="profile" />
-	<meta property="og:title" content="{$social_title}" />
-	<meta property="og:description" content="{$social_desc}" />
+	<meta property="og:title" content="{$social_title|default:'Carlos Ferreira - All Things Developer from London'}" />
+	<meta property="og:description" content="{$social_desc|default:'Name is Carlos and I like making things. Check out my website to know what I can do.'}" />
 	<meta property="og:image" content="https://carlos.fyi/assets/imgs/fb_share_img.png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -17,10 +17,10 @@
 
 	<!-- Twitter Card Tags -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@carlos_tweets">
-	<meta name="twitter:creator" content="@carlos_tweets">
-	<meta name="twitter:title" content="{$social_title}">
-	<meta name="twitter:description" content="{$social_desc}">
+	<meta name="twitter:site" content="@cajogos">
+	<meta name="twitter:creator" content="@cajogos">
+	<meta name="twitter:title" content="{$social_title|default:'Carlos Ferreira - All Things Developer from London'}">
+	<meta name="twitter:description" content="{$social_desc|default:'Name is Carlos and I like making things. Check out my website to know what I can do.'}">
 	<meta name="twitter:image" content="https://carlos.fyi/assets/imgs/fb_share_img.png">
 
 	<!-- Stylesheets -->

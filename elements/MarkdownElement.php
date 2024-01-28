@@ -1,6 +1,6 @@
 <?php
 
-use Cajogos\Biscuit\Element as Element;
+use BaseElement as Element;
 
 class MarkdownElement extends Element
 {
@@ -54,6 +54,8 @@ class MarkdownElement extends Element
 		{
 			return null;
 		}
-		return $this->parsedown->text($this->contents);
+
+		$parsed = $this->parsedown->text($this->contents);
+		return $parsed;
 	}
 }

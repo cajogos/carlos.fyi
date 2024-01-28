@@ -37,7 +37,7 @@
         </div>
 
         <div class="post-content">
-            {$post->getContent()}
+            {$post_content}
         </div>
 
         <div class="post-comments">

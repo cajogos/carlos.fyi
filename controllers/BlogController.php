@@ -1,7 +1,7 @@
 <?php
 
-use \Cajogos\Biscuit\Controller as Controller;
-use \Cajogos\Biscuit\Template as Template;
+use BaseController as Controller;
+use BaseTemplate as Template;
 
 class BlogController extends Controller
 {
@@ -78,14 +78,13 @@ class BlogController extends Controller
 		$published_date = strtotime($post->getDatePublished());
 
 		$tpl = Template::create('blog/post.tpl');
+
 		$tpl->assign('post', $post);
 		$tpl->assign('author', $post->getAuthor());
 		$tpl->assign('categories', $post->getCategories());
-
 		$tpl->assign('published_date', $published_date);
-
 		$tpl->assign('page_title', $post->getHeadline() . ' | Carlos.fyi Blog');
-
+		$tpl->assign('post_content', $post->getContent());
 		$tpl->display();
 	}
 

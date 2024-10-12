@@ -1,6 +1,6 @@
 # Carlos Ferreira (aka cajogos) - Personal Website
 
-Site available at [https://carlos.fyi](carlos.fyi).
+Site available at [carlos.fyi](https://carlos.fyi).
 
 > ### Now built in AstroJS 🚀!
 
@@ -15,6 +15,10 @@ Site available at [https://carlos.fyi](carlos.fyi).
 - [ ] Deployed live. Date: TBD
 - [ ] Set-up CI/CD pipeline (GitHub Actions?).
 
+### SEO
+- [ ] Sitemap XML.
+- [ ] Robots.txt.
+
 ### Pages
 
 - [ ] Add home page. (About)
@@ -28,6 +32,6 @@ Site available at [https://carlos.fyi](carlos.fyi).
 
 ### Improvements
 - [ ] Add a blog system (using Markdown).
-  - [ ] Cheat sheet for Rubik's Cube.
-  - [ ] Other cheat sheets.
+  - [ ] Cheat sheets.
+  - [ ] RSS Feed for blog.
 - [ ] Dark style.

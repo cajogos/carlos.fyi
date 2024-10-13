@@ -17,7 +17,7 @@ Site available at [carlos.fyi](https://carlos.fyi).
 - [ ] Set-up CI/CD pipeline (GitHub Actions?).
 
 ### SEO
-- [ ] Sitemap XML.
+- [ ] Sitemap XML - https://docs.astro.build/en/guides/integrations-guide/sitemap/
 - [ ] Robots.txt.
 - [ ] Meta tags.
 - [ ] Open Graph tags.

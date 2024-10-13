@@ -9,7 +9,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="https://twitter.com/carlos_tweets" target="_blank" title="Follow me on Twitter!">
+			<a href="https://x.com/cajogos" target="_blank" title="Follow me on Twitter!">
 				<span class="fa-stack">
 					<i class="fa fa-square-o fa-stack-2x"></i>
 					<i class="fa fa-twitter fa-stack-1x"></i>

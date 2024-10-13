@@ -1,3 +1,20 @@
+### Main Routes:
+- `GET /`: `MainController::displayIndex` (index)
+- `GET /contact`: `MainController::displayContact` (contact)
+- `GET /skills`: `MainController::displaySkills` (skills)
+- `GET /timeline`: `MainController::displayTimeline` (timeline)
+
+### Other Routes:
+- `GET /rubiks-cube`: `MainController::displayRubiksCube` (rubiks-cube)
+
+### Blog Routes:
+- `GET /blog`: `BlogController::displayBlogHome` (blog-home)
+- `GET /blog/feed`: `BlogController::displayBlogFeed` (blog-feed)
+- `GET /blog/author/[*:author_id]`: `BlogController::displayBlogAuthor` (blog-author)
+- `GET /blog/category/[*:category_id]`: `BlogController::displayBlogCategory` (blog-category)
+- `GET /blog/[*:post_id]`: `BlogController::displayBlogPost` (blog-post)
+
+```php
 <?php
 
 $handler = SiteHandler::get();
@@ -19,3 +36,4 @@ $handler->addRoute('GET', '/blog/category/[*:category_id]', 'BlogController::dis
 $handler->addRoute('GET', '/blog/[*:post_id]', 'BlogController::displayBlogPost', 'blog-post');
 
 $handler->handleRouting();
+```

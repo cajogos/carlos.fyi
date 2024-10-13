@@ -1,3 +1,13 @@
+---
+Headline: MySQL Cheat Sheet
+Description: A cheat sheet with some tips and tricks to help with MySQL databases.
+Author: carlos-ferreira
+Date: 2019-08-23T21:15:00+00:00
+DateUpdated: 2019-08-23T21:15:00+00:00
+Categories: cheat-sheets, coding
+FeaturedImage: /assets/imgs/blog/data-data-data.jpg
+---
+
 ## MySQL tips and tricks
 
 I have used MySQL for many years now and I feel like I keep coming back to the same tutorial pages for different things I come across.

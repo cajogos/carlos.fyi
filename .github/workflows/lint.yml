@@ -44,6 +44,6 @@ jobs:
         uses: super-linter/super-linter/slim@v7
         env:
           DEFAULT_BRANCH: master
-          FILTER_REGEX_EXCLUDE: src/**/*
+          FILTER_REGEX_EXCLUDE: src/**/*|.OLDPHP/**/*
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_JAVASCRIPT_ES: true

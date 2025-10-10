@@ -61,70 +61,70 @@ CubeAlgoMove.prototype.display = function ()
     {
         if (this._direction === CubeAlgoMove.DIRECTION_ANTICLOCKWISE)
         {
-            top = '<i class="fa fa-long-arrow-right"></i>';
+            top = '<i class="fa-solid fa-arrow-right"></i>';
         }
         else
         {
-            top = '<i class="fa fa-long-arrow-left"></i>';
+            top = '<i class="fa-solid fa-arrow-left"></i>';
         }
     }
     else if (this._rotation === 'D')
     {
         if (this._direction === CubeAlgoMove.DIRECTION_ANTICLOCKWISE)
         {
-            bottom = '<i class="fa fa-long-arrow-left"></i>';
+            bottom = '<i class="fa-solid fa-arrow-left"></i>';
         }
         else
         {
-            bottom = '<i class="fa fa-long-arrow-right"></i>';
+            bottom = '<i class="fa-solid fa-arrow-right"></i>';
         }
     }
     else if (this._rotation === 'F')
     {
         if (this._direction === CubeAlgoMove.DIRECTION_ANTICLOCKWISE)
         {
-            top = '<i class="fa fa-long-arrow-left"></i>';
-            right = '<i class="fa fa-long-arrow-up"></i>';
+            top = '<i class="fa-solid fa-arrow-left"></i>';
+            right = '<i class="fa-solid fa-arrow-up"></i>';
         }
         else
         {
-            top = '<i class="fa fa-long-arrow-right"></i>';
-            right = '<i class="fa fa-long-arrow-down"></i>';
+            top = '<i class="fa-solid fa-arrow-right"></i>';
+            right = '<i class="fa-solid fa-arrow-down"></i>';
         }
     }
     else if (this._rotation === 'R')
     {
         if (this._direction === CubeAlgoMove.DIRECTION_ANTICLOCKWISE)
         {
-            right = '<i class="fa fa-long-arrow-down"></i>';
+            right = '<i class="fa-solid fa-arrow-down"></i>';
         }
         else
         {
-            right = '<i class="fa fa-long-arrow-up"></i>';
+            right = '<i class="fa-solid fa-arrow-up"></i>';
         }
     }
     else if (this._rotation === 'L')
     {
         if (this._direction === CubeAlgoMove.DIRECTION_ANTICLOCKWISE)
         {
-            left = '<i class="fa fa-long-arrow-up"></i>';
+            left = '<i class="fa-solid fa-arrow-up"></i>';
         }
         else
         {
-            left = '<i class="fa fa-long-arrow-down"></i>';
+            left = '<i class="fa-solid fa-arrow-down"></i>';
         }
     }
     else if (this._rotation === 'B')
     {
         if (this._direction === CubeAlgoMove.DIRECTION_ANTICLOCKWISE)
         {
-            top = '<i class="fa fa-long-arrow-right"></i>';
-            right = '<i class="fa fa-long-arrow-down"></i>';
+            top = '<i class="fa-solid fa-arrow-right"></i>';
+            right = '<i class="fa-solid fa-arrow-down"></i>';
         }
         else
         {
-            top = '<i class="fa fa-long-arrow-left"></i>';
-            right = '<i class="fa fa-long-arrow-up"></i>';
+            top = '<i class="fa-solid fa-arrow-left"></i>';
+            right = '<i class="fa-solid fa-arrow-up"></i>';
         }
     }
 

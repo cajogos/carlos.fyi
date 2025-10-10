@@ -1,0 +1,214 @@
+---
+// Navigation component with improved slideout menu
+---
+
+<!-- Overlay for mobile -->
+<div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 invisible transition-all duration-300 ease-in-out"></div>
+
+<!-- Navigation Menu -->
+<div id="navigation-menu" class="fixed inset-y-0 left-0 z-50 w-80 max-w-[85vw] bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
+	<div class="p-6 h-full overflow-y-auto">
+		<h1 class="nav-title text-cajogos-blue text-3xl font-light mb-5 text-center cursor-pointer hover:opacity-100 opacity-80 transition-opacity duration-500" onclick="window.location='/'">
+			carlos.fyi
+		</h1>
+
+		<span class="nav-header block text-xs uppercase tracking-wider text-gray-400 mb-2 px-3">Me, Myself and I</span>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/" title="Find out more about who this Carlos Ferreira fellow is.">
+			Who I am
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/contact" title="Contact Carlos Ferreira web developer from London.">
+			Contact Me
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/skills" title="Check out the skills of Carlos Ferreira.">
+			My Skills
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/timeline" title="See events from my life, aka resume.">
+			Timeline
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="https://github.com/cajogos?tab=repositories" title="Check out my repositories on GitHub!" target="_blank">
+			Open Source
+		</a>
+
+		<span class="nav-header block text-xs uppercase tracking-wider text-gray-400 mb-2 px-3 mt-6">Others</span>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/rubiks-cube" title="Learn how to solve the 3x3 Rubik's Cube">
+			<i class="fa-solid fa-cube mr-2"></i> 3x3 Rubik's Cube Tutorial
+		</a>
+
+		<div class="nav-footer mt-8 pt-6 border-t border-gray-700">
+			<p class="text-sm text-gray-400 mb-2">Made with <i class="fa-solid fa-heart text-global-orangered"></i> by me.</p>
+			<p class="text-sm text-gray-400">
+				<i class="fa-solid fa-envelope mr-2"></i>
+				<a href="mailto:c@rlos.rocks" class="text-link-blue hover:text-link-hover transition-colors duration-200">c@rlos.rocks</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- Toggle Button -->
+<button id="toggle-button" class="fixed top-4 left-4 z-40 bg-cajogos-blue bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm p-3 rounded-full shadow-lg border border-cajogos-blue border-opacity-30 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cajogos-blue focus:ring-opacity-50" aria-label="Toggle navigation menu">
+	<i class="fa-solid fa-bars text-cajogos-blue"></i>
+</button>
+
+<script>
+	class SlideoutMenu {
+		private menu: HTMLElement | null;
+		private overlay: HTMLElement | null;
+		private toggleButton: HTMLElement | null;
+		private isOpen: boolean;
+		private isAnimating: boolean;
+
+		constructor() {
+			this.menu = document.getElementById('navigation-menu');
+			this.overlay = document.getElementById('menu-overlay');
+			this.toggleButton = document.getElementById('toggle-button');
+			this.isOpen = false;
+			this.isAnimating = false;
+
+			this.init();
+		}
+
+		init() {
+			// Ensure menu is visible
+			if (this.menu) {
+				this.menu.style.display = 'block';
+			}
+
+			// Add event listeners
+			if (this.toggleButton) {
+				this.toggleButton.addEventListener('click', (e) => {
+					e.stopPropagation();
+					this.toggle();
+				});
+			}
+
+			// Close menu when clicking overlay
+			if (this.overlay) {
+				this.overlay.addEventListener('click', () => this.close());
+			}
+
+			// Close menu when clicking outside on mobile
+			document.addEventListener('click', (e) => {
+				if (this.isOpen && this.menu && this.toggleButton &&
+					!this.menu.contains(e.target as Node) && !this.toggleButton.contains(e.target as Node)) {
+					this.close();
+				}
+			});
+
+			// Close menu on escape key
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape' && this.isOpen) {
+					this.close();
+				}
+			});
+
+			// Handle window resize
+			window.addEventListener('resize', () => {
+				if (window.innerWidth >= 1024 && this.isOpen) {
+					// On desktop, close menu and reset body
+					this.close();
+				}
+			});
+
+			// Prevent body scroll when menu is open on mobile
+			this.updateBodyScroll();
+		}
+
+		toggle() {
+			if (this.isAnimating) return;
+
+			if (this.isOpen) {
+				this.close();
+			} else {
+				this.open();
+			}
+		}
+
+		open() {
+			if (this.isAnimating || this.isOpen) return;
+
+			this.isAnimating = true;
+			this.isOpen = true;
+
+			// Show overlay
+			if (this.overlay) {
+				this.overlay.classList.remove('opacity-0', 'invisible');
+				this.overlay.classList.add('opacity-100', 'visible');
+			}
+
+			// Show menu
+			if (this.menu) {
+				this.menu.classList.remove('-translate-x-full');
+				this.menu.classList.add('translate-x-0');
+			}
+
+			// Update button icon
+			if (this.toggleButton) {
+				this.toggleButton.innerHTML = '<i class="fa-solid fa-times text-cajogos-blue"></i>';
+			}
+
+			// Update body scroll
+			this.updateBodyScroll();
+
+			// Reset animation flag
+			setTimeout(() => {
+				this.isAnimating = false;
+			}, 300);
+		}
+
+		close() {
+			if (this.isAnimating || !this.isOpen) return;
+
+			this.isAnimating = true;
+			this.isOpen = false;
+
+			// Hide overlay
+			if (this.overlay) {
+				this.overlay.classList.remove('opacity-100', 'visible');
+				this.overlay.classList.add('opacity-0', 'invisible');
+			}
+
+			// Hide menu
+			if (this.menu) {
+				this.menu.classList.remove('translate-x-0');
+				this.menu.classList.add('-translate-x-full');
+			}
+
+			// Update button icon
+			if (this.toggleButton) {
+				this.toggleButton.innerHTML = '<i class="fa-solid fa-bars text-cajogos-blue"></i>';
+			}
+
+			// Update body scroll
+			this.updateBodyScroll();
+
+			// Reset animation flag
+			setTimeout(() => {
+				this.isAnimating = false;
+			}, 300);
+		}
+
+		updateBodyScroll() {
+			// Prevent body scroll on mobile when menu is open
+			if (window.innerWidth < 1024) {
+				if (this.isOpen) {
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = '';
+				}
+			} else {
+				document.body.style.overflow = '';
+			}
+		}
+	}
+
+	// Initialize when DOM is loaded
+	document.addEventListener('DOMContentLoaded', () => {
+		new SlideoutMenu();
+	});
+</script>

@@ -1,0 +1,56 @@
+---
+// Social Footer component for main content areas
+---
+
+<div class="social-links">
+	<ul class="flex space-x-6 justify-center">
+		<li>
+			<a href="mailto:c@rlos.rocks" title="Get in touch via email!" class="text-white hover:text-cajogos-blue-light transition-colors duration-200 text-2xl inline-block">
+				<i class="fa-solid fa-envelope" style="display: inline-block; width: 1em; height: 1em;"></i>
+			</a>
+		</li>
+		<li>
+			<a href="https://x.com/cajogos" target="_blank" title="Follow me on X!" class="text-white hover:text-cajogos-blue-light transition-colors duration-200 text-2xl inline-block">
+				<i class="fa-brands fa-twitter" style="display: inline-block; width: 1em; height: 1em;"></i>
+			</a>
+		</li>
+		<li>
+			<a href="https://www.linkedin.com/in/cajogos" target="_blank" title="Connect with me on LinkedIn!" class="text-white hover:text-cajogos-blue-light transition-colors duration-200 text-2xl inline-block">
+				<i class="fa-brands fa-linkedin" style="display: inline-block; width: 1em; height: 1em;"></i>
+			</a>
+		</li>
+		<li>
+			<a href="https://github.com/cajogos" target="_blank" title="Check out my GitHub account!" class="text-white hover:text-cajogos-blue-light transition-colors duration-200 text-2xl inline-block">
+				<i class="fa-brands fa-github" style="display: inline-block; width: 1em; height: 1em;"></i>
+			</a>
+		</li>
+		<li>
+			<a href="https://t.me/cajogos" target="_blank" title="Speak to me on Telegram!" class="text-white hover:text-cajogos-blue-light transition-colors duration-200 text-2xl inline-block">
+				<i class="fa-brands fa-telegram" style="display: inline-block; width: 1em; height: 1em;"></i>
+			</a>
+		</li>
+	</ul>
+	<p class="social-links-message text-center text-sm text-gray-200 mt-2"></p>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const messageBox = document.querySelector('.social-links-message');
+		const socialLinks = document.querySelectorAll('.social-links li a');
+
+		socialLinks.forEach(link => {
+			link.addEventListener('mouseenter', function(this: HTMLElement) {
+				const title = this.getAttribute('title');
+				if (messageBox) {
+					messageBox.textContent = title;
+				}
+			});
+
+			link.addEventListener('mouseleave', function() {
+				if (messageBox) {
+					messageBox.textContent = '';
+				}
+			});
+		});
+	});
+</script>

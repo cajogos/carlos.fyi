@@ -1,30 +1,129 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-/**
- * 	public static function displayTimeline()
-	{
-		$tpl = Template::create('pages/timeline.tpl');
-		$tpl->assign('page_title', 'My Life Events');
-		$tpl->assign('page_id', 'timeline');
-		$tpl->assign('social_title', 'My Life Events | Carlos Ferreira - All Things Developer from London');
-		$tpl->assign('social_desc', 'Name is Carlos and I like making things. Check out my website to know what I can do.');
-		$tpl->display();
-	}
-
- *
-*/
-
 ---
 
-<Layout title="My Life Events | Carlos Ferreira - All Things Developer from London">
+<Layout
+	title="My Life Events | Carlos Ferreira - All Things Developer from London"
+	description="Name is Carlos and I like making things. Check out my website to know what I can do."
+	pageId="timeline"
+>
 
-    <main class="container mx-auto p-4">
+	<main class="timeline-page">
+		<h1 class="text-4xl md:text-5xl font-light text-white text-center mb-8">
+			<i class="fa fa-clock-o text-cajogos-blue mr-3"></i>My Life Events
+		</h1>
+		<p class="text-center text-white text-lg mb-8">
+			I was going to write a old boring styled resume, but then realised no one likes to look into those things, so here is a timeline of my life.
+		</p>
+		<p class="text-center text-white mb-12">
+			Of course, you could always checkout my
+			<a href="https://linkedin.com/in/cajogos" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+				LinkedIn
+			</a> for a more <em>"professional"</em> look.<br />
+			Interested in what you see? <a href="/contact" class="text-cajogos-blue hover:text-white transition-colors duration-200">Speak to me</a>.
+		</p>
 
-        <h1 class="text-2xl font-bold">TODO</h1>
+		<div class="max-w-4xl mx-auto space-y-8">
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2019</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Sep:</strong> Starting a new master's degree in MSc Advanced Software Engineering at the University of Westminster in London.</li>
+					<li><strong>Jul:</strong> Re-joined CoderDojo after my break since 2018.</li>
+					<li><strong>Jul:</strong> Decided to leave my job at <a href="http://www.advfn.com" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">ADVFN Plc.</a> to focus on my studies and health.</li>
+					<li><strong>Mar:</strong> Mastered the 3x3 Rubik's Cube <a href="/rubiks-cube" class="text-cajogos-blue hover:text-white transition-colors duration-200">using these algorithms</a>.</li>
+					<li><strong>Feb:</strong> Started my weight loss journey which involves losing over 50 kilos and improve my overall health.</li>
+				</ul>
+			</div>
 
-        <h1>Timeline Page</h1>
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2018</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Jan:</strong> Left CoderDojo after over 4 years of being a lead mentor in London.</li>
+				</ul>
+			</div>
 
-    </main>
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2017</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Oct:</strong> Became Senior Developer at <a href="http://www.advfn.com" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">ADVFN Plc</a>.</li>
+					<li><strong>Jun:</strong> Got involved with Cryptocurrencies.</li>
+					<li><strong>Apr:</strong> Officially released my own PHP Framework called <a href="https://github.com/cajogos/biscuit-link" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">Biscuit Link</a>.</li>
+					<li><strong>Jan:</strong> Launched this website and the new <a href="/" class="text-cajogos-blue hover:text-white transition-colors duration-200">carlos.fyi</a> brand.</li>
+					<li><strong>Jan:</strong> Became head of development for the new CoderDojo London website (now gone).</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2016</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Oct:</strong> Became an International Speaker for CoderDojo. <a href="https://twitter.com/DojoCon/status/817481937531047936" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">Speaking at DojoCon 2016 in Ireland</a>.</li>
+					<li><strong>May:</strong> Joined the <a href="https://idea.org.uk" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">iDEA</a> team on behalf of CoderDojo developing two badges using <a href="http://trinket.io" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">Trinket</a> and the Python programming language.</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2015</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Oct:</strong> Became Web Application Developer at <a href="http://www.advfn.com" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">ADVFN</a>.</li>
+					<li><strong>Jul:</strong> Graduated, with first class, BSc (Hons) Computer Science from University of Greenwich in London.</li>
+					<li><strong>Feb:</strong> Junior developer role at <a href="http://www.advfn.com" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">ADVFN</a>.</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2014</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Sep:</strong> Joined the new CIS mentors at University of Greenwich, on my third year.</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2013</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Sep:</strong> Joined the then called CMS mentors at University of Greenwich, on my second year.</li>
+					<li><strong>Sep:</strong> Volunteered for a week at Campus Party at The O2 in London.</li>
+					<li><strong>May:</strong> Became a lead mentor for CoderDojo in London.</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2012</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Nov:</strong> Adopted a new cat. Molly the cat, she is essentially, my <a href="https://www.instagram.com/p/BOtDTg-hdlr" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">instagram account</a>.</li>
+					<li><strong>Sep:</strong> Started my university degree at University of Greenwich in London. BSc (Hons) Computer Science.</li>
+					<li><strong>Jul:</strong> Finished my A-level studies at St Francis Xavier (SFX) 6th Form College in South London.</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2010</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Jul:</strong> Finished my GCSE studies in South London.</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2008</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Mar:</strong> Moved from Viseu (Portugal) to London (United Kingdom).</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">2007</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>Apr:</strong> Cajogos, my first website, was built. I was then 12 years old. My passion for web development started.</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">1994</h2>
+				<ul class="space-y-2 text-white">
+					<li><strong>May:</strong> I was born, in Viseu, Portugal.</li>
+				</ul>
+			</div>
+		</div>
+	</main>
 
 </Layout>

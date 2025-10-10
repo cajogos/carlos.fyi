@@ -1,0 +1,197 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout
+	title="How to solve a 3x3 Rubik's Cube | Carlos Ferreira - All Things Developer from London"
+	description="Learn how to solve a 3x3 Rubik's Cube with step-by-step algorithms and visual guides."
+	pageId="rubiks-cube"
+>
+
+	<main class="rubiks-cube-page">
+		<h1 class="text-4xl md:text-5xl font-light text-white text-center mb-8">
+			<i class="fa fa-cube text-cajogos-blue mr-3"></i>How to solve a 3x3 Rubik's Cube<i class="fa fa-cube text-cajogos-blue ml-3"></i>
+		</h1>
+
+		<div class="max-w-4xl mx-auto space-y-8">
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Face Rotations</h2>
+				<p class="text-white mb-6">
+					The system to solve a Rubik's cube uses a simple face rotation schema. You will find that the whole face will rotate either clockwise or
+					anti-clockwise. Below is an example of all the face rotations you might need to make:
+				</p>
+				<ul class="cube-algo flex flex-wrap gap-2 justify-center">
+					<li data-move="R" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R</li>
+					<li data-move="Ri" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R'</li>
+					<li data-move="L" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">L</li>
+					<li data-move="Li" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">L'</li>
+					<li data-move="B" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">B</li>
+					<li data-move="Bi" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">B'</li>
+					<li data-move="D" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">D</li>
+					<li data-move="Di" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">D'</li>
+					<li data-move="F" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F</li>
+					<li data-move="Fi" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F'</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 1: Daisy</h2>
+				<p class="text-white">Create a daisy shape using the yellow-side of the cube.</p>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 2: White Cross</h2>
+				<p class="text-white">Turn the sides around so that the edges match the centre pieces.</p>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 3: White Corners</h2>
+				<p class="text-white">Match the white corners with the edge and centre pieces.</p>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 4: Second Layer</h2>
+				<p class="text-white mb-6">Move the pieces into their correct positions by using a right and left algorithm.</p>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div>
+						<h3 class="text-xl font-light text-white text-center mb-4">Right Edge Algorithm</h3>
+						<ul class="cube-algo flex flex-wrap gap-2 justify-center">
+							<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+							<li data-move="R" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R</li>
+							<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+							<li data-move="Ri" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R'</li>
+							<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+							<li data-move="Fi" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F'</li>
+							<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+							<li data-move="F" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-xl font-light text-white text-center mb-4">Left Edge Algorithm</h3>
+						<ul class="cube-algo flex flex-wrap gap-2 justify-center">
+							<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+							<li data-move="Li" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">L'</li>
+							<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+							<li data-move="L" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">L</li>
+							<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+							<li data-move="F" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F</li>
+							<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+							<li data-move="Fi" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F'</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 5: Yellow Cross</h2>
+				<p class="text-white mb-6">Do the following to reach the yellow cross:</p>
+				<ul class="cube-algo flex flex-wrap gap-2 justify-center mb-6">
+					<li data-move="F" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F</li>
+					<li data-move="R" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="Ri" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R'</li>
+					<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+					<li data-move="Fi" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">F'</li>
+				</ul>
+				<div class="bg-yellow-500 bg-opacity-20 border border-yellow-400 rounded-lg p-4">
+					<p class="text-white text-center">
+						<strong>Center Dot</strong>&nbsp;&nbsp;
+						<i class="fa fa-long-arrow-right text-cajogos-blue"></i>&nbsp;&nbsp;
+						<strong>Reverse L shape</strong>&nbsp;&nbsp;
+						<i class="fa fa-long-arrow-right text-cajogos-blue"></i>&nbsp;&nbsp;
+						<strong>Line</strong>&nbsp;&nbsp;
+						<i class="fa fa-long-arrow-right text-cajogos-blue"></i>&nbsp;&nbsp;
+						<strong>Cross</strong>
+					</p>
+				</div>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 6: Yellow Edges</h2>
+				<p class="text-white mb-6">Use the following algorithm to swap two wrong yellow edges.</p>
+				<ul class="cube-algo flex flex-wrap gap-2 justify-center">
+					<li data-move="R" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="Ri" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R'</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="R" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="Ri" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R'</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+				</ul>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 7: Yellow Corners</h2>
+				<p class="text-white mb-6">
+					Look for a yellow corner which is on the right position, then hold the cube in your hands with this one in the front-right-top and execute the
+					algorithm below.
+				</p>
+				<ul class="cube-algo flex flex-wrap gap-2 justify-center mb-6">
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="R" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R</li>
+					<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+					<li data-move="Li" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">L'</li>
+					<li data-move="U" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U</li>
+					<li data-move="Ri" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R'</li>
+					<li data-move="Ui" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">U'</li>
+					<li data-move="L" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">L</li>
+				</ul>
+				<div class="bg-yellow-500 bg-opacity-20 border border-yellow-400 rounded-lg p-4">
+					<p class="text-white">
+						If the pieces didn't get where they belong do the algorithm one more time.<br/>
+						Sometimes you <strong>can't find a piece in the correct spot</strong>. In this case utilize the <strong>same algorithm for any random
+							corner</strong> to bring one to the correct position.
+					</p>
+				</div>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="text-3xl font-light text-white mb-4">Step 8: Orient the corners</h2>
+				<p class="text-white mb-6">Hold the cube in your hand so the upper piece you want to orient is on the FRT corner, then do this algorithm twice or four times.</p>
+				<ul class="cube-algo flex flex-wrap gap-2 justify-center mb-6">
+					<li data-move="Ri" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R'</li>
+					<li data-move="Di" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">D'</li>
+					<li data-move="R" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">R</li>
+					<li data-move="D" class="cube-move bg-white bg-opacity-20 text-white px-3 py-2 rounded cursor-pointer hover:bg-opacity-30 transition-all duration-200">D</li>
+				</ul>
+				<div class="bg-red-500 bg-opacity-20 border border-red-400 rounded-lg p-4">
+					<p class="text-white">
+						<strong>Warning:</strong> DO NOT skip the last D turn as soon as you see the yellow sticker facing up at the top. Keep
+						going until the whole algorithm is done.
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+
+</Layout>
+
+<script>
+	// Simple cube move visualization
+	document.addEventListener('DOMContentLoaded', function() {
+		const cubeMoves = document.querySelectorAll('.cube-move');
+
+		cubeMoves.forEach(move => {
+			move.addEventListener('click', function(this: HTMLElement) {
+				// Add visual feedback
+				this.style.transform = 'scale(0.95)';
+				this.style.backgroundColor = 'rgba(0, 162, 255, 0.4)';
+
+				setTimeout(() => {
+					this.style.transform = 'scale(1)';
+					this.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+				}, 150);
+
+				// You could add actual cube visualization here
+				console.log('Cube move:', this.getAttribute('data-move'));
+			});
+		});
+	});
+</script>

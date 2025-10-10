@@ -1,0 +1,125 @@
+---
+// Navigation component with slideout menu
+---
+
+<div id="navigation-menu" class="fixed inset-y-0 left-0 z-50 w-80 bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 ease-in-out">
+	<div class="p-6">
+		<h1 class="nav-title text-cajogos-blue text-3xl font-light mb-5 text-center cursor-pointer hover:opacity-100 opacity-80 transition-opacity duration-500" onclick="window.location='/'">
+			carlos.fyi
+		</h1>
+
+		<span class="nav-header block text-xs uppercase tracking-wider text-gray-400 mb-2 px-3">Me, Myself and I</span>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/" title="Find out more about who this Carlos Ferreira fellow is.">
+			Who I am
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/contact" title="Contact Carlos Ferreira web developer from London.">
+			Contact Me
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/skills" title="Check out the skills of Carlos Ferreira.">
+			My Skills
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/timeline" title="See events from my life, aka resume.">
+			Timeline
+		</a>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="https://github.com/cajogos?tab=repositories" title="Check out my repositories on GitHub!" target="_blank">
+			Open Source
+		</a>
+
+		<span class="nav-header block text-xs uppercase tracking-wider text-gray-400 mb-2 px-3 mt-6">Others</span>
+
+		<a class="nav-link block text-xs uppercase tracking-wider text-gray-300 py-2 px-3 hover:text-white hover:bg-gray-800 transition-colors duration-200" href="/rubiks-cube" title="Learn how to solve the 3x3 Rubik's Cube">
+			<i class="fa fa-cube mr-2"></i> 3x3 Rubik's Cube Tutorial
+		</a>
+
+		<div class="nav-footer mt-8 pt-6 border-t border-gray-700">
+			<p class="text-sm text-gray-400 mb-2">Made with <i class="fa fa-heart text-global-orangered"></i> by me.</p>
+			<p class="text-sm text-gray-400">
+				<i class="fa fa-envelope mr-2"></i>
+				<a href="mailto:c@rlos.rocks" class="text-cajogos-blue hover:text-white transition-colors duration-200">c@rlos.rocks</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<div id="website-content" class="relative">
+	<button class="toggle-button fixed top-4 left-4 z-40 bg-white bg-opacity-90 hover:bg-opacity-100 p-3 rounded-full shadow-lg transition-all duration-200">
+		<i class="fa fa-bars text-gray-800"></i>
+	</button>
+</div>
+
+<script>
+	class SlideoutMenu {
+		private menu: HTMLElement | null;
+		private panel: HTMLElement | null;
+		private toggleButton: HTMLElement | null;
+		private isOpen: boolean;
+		private padding: number;
+		private tolerance: number;
+
+		constructor() {
+			this.menu = document.getElementById('navigation-menu');
+			this.panel = document.getElementById('website-content');
+			this.toggleButton = document.querySelector('.toggle-button');
+			this.isOpen = false;
+			this.padding = 300;
+			this.tolerance = 70;
+
+			this.init();
+		}
+
+		init() {
+			// Show navigation menu after page loads
+			if (this.menu) this.menu.style.display = 'block';
+
+			// Add event listeners
+			if (this.toggleButton) this.toggleButton.addEventListener('click', () => this.toggle());
+
+			// Close menu when clicking outside
+			document.addEventListener('click', (e) => {
+				if (this.isOpen && this.menu && this.toggleButton &&
+					!this.menu.contains(e.target as Node) && !this.toggleButton.contains(e.target as Node)) {
+					this.close();
+				}
+			});
+
+			// Close menu on escape key
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape' && this.isOpen) {
+					this.close();
+				}
+			});
+		}
+
+		toggle() {
+			if (this.isOpen) {
+				this.close();
+			} else {
+				this.open();
+			}
+		}
+
+		open() {
+			if (this.menu) this.menu.style.transform = 'translateX(0)';
+			if (this.panel) this.panel.style.transform = `translateX(${this.padding}px)`;
+			if (this.toggleButton) this.toggleButton.innerHTML = '<i class="fa fa-times text-gray-800"></i>';
+			this.isOpen = true;
+		}
+
+		close() {
+			if (this.menu) this.menu.style.transform = 'translateX(-100%)';
+			if (this.panel) this.panel.style.transform = 'translateX(0)';
+			if (this.toggleButton) this.toggleButton.innerHTML = '<i class="fa fa-bars text-gray-800"></i>';
+			this.isOpen = false;
+		}
+	}
+
+	// Initialize when DOM is loaded
+	document.addEventListener('DOMContentLoaded', () => {
+		new SlideoutMenu();
+	});
+</script>

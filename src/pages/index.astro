@@ -1,30 +1,140 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import SocialFooter from '../components/SocialFooter.astro';
 
-/*
-	public static function displayIndex()
-	{
-		$tpl = Template::create('pages/index.tpl');
-		$tpl->assign('page_title', 'Welcome');
-		$tpl->assign('page_id', 'index');
-		$tpl->assign('social_title', 'Carlos Ferreira - All Things Developer from London');
-		$tpl->assign('social_desc', 'Name is Carlos and I like making things. Check out my website to know what I can do.');
-		$tpl->assign('age', Utils::getage('20-05-1994'));
-		$tpl->display();
+// Calculate age dynamically
+function calculateAge(birthDate: string): number {
+	const birth = new Date(birthDate);
+	const today = new Date();
+	let age = today.getFullYear() - birth.getFullYear();
+	const monthDiff = today.getMonth() - birth.getMonth();
+
+	if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+		age--;
 	}
-*/
 
+	return age;
+}
+
+const age = calculateAge('1994-05-20');
 ---
 
-<Layout title="Carlos Ferreira - All Things Developer from London">
+<Layout
+	title="Welcome | Carlos Ferreira - All Things Developer from London"
+	description="Name is Carlos and I like making things. Check out my website to know what I can do."
+	pageId="index"
+>
 
-	<main class="container mx-auto p-4">
+	<main class="about-page">
+		<h1 class="hello-msg text-4xl md:text-5xl font-light text-white text-center mb-8" title="Carlos Ferreira">
+			Hey there, I am <span class="text-cajogos-blue">Carlos</span> and
+			<span class="subtitle block text-2xl md:text-3xl mt-2">
+				I make things <i class="fa fa-star fa-spin text-global-yellow"></i>
+			</span>
+		</h1>
 
-		<h1 class="text-2xl font-bold">TODO</h1>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="text-center">
+				<img src="/images/photo/photo_squared_300.jpg" class="w-48 h-48 rounded-full mx-auto mb-4 shadow-lg" alt="Carlos Ferreira" />
+				<p class="text-white text-lg mb-4">All Things Developer</p>
+				<SocialFooter />
+				<p class="text-center mt-6">
+					<a href="/contact" title="Find out more ways of contacting me." class="text-cajogos-blue hover:text-white transition-colors duration-200">
+						Wanna chat?
+					</a>
+				</p>
+			</div>
 
-		<h1>Index Page</h1>
+			<div class="md:col-span-2">
+				<h2 class="text-3xl font-light text-white mb-6">About Me</h2>
+				<div class="space-y-4 text-white">
+					<p>
+						My full name is <strong>Carlos Jorge Lima Ferreira</strong>, but my friends call me
+						<strong class="text-cajogos-blue">Carlos</strong>.
+						<small class="text-gray-300">(yes, you can call me Carlos)</small>
+					</p>
+					<p>Born in '94, which makes me {age} years <del class="text-gray-400">old</del> young.</p>
+					<p>
+						I lived in Viseu, Portugal*, until I was 13, and I am now living in London.
+						<small class="text-gray-300">(the one in the United Kingdom)</small>
+					</p>
+					<p>I graduated with a first-class degree in BSc (Hons) Computer Science from the University of Greenwich.</p>
+					<p>I studied A-Levels in Mathematics (with Statistics), ICT, Portuguese and Graphics Design.</p>
+					<p class="text-sm text-gray-300">*Sim, eu sei falar e escrever em Português.</p>
 
+					<h2 class="text-3xl font-light text-white mt-8 mb-6">Things I do</h2>
+					<div class="space-y-3">
+						<p>Drink <em>at least</em> a cup of coffee a day.</p>
+						<p>
+							I like to write and contribute to
+							<a href="https://github.com/cajogos" title="See my Github contributions." target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+								open-source code
+							</a>.
+						</p>
+						<p>
+							I created a
+							<a href="https://packagist.org/packages/cajogos/php-temp-cache" title="PHP TempCache" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+								PHP Caching Library
+							</a>.
+						</p>
+						<p>
+							I have my own
+							<a href="https://github.com/cajogos/biscuit-link" title="Biscuit Link - PHP Framework for Everyone" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+								PHP framework
+							</a>, deeply inspired in my love for biscuits.
+						</p>
+						<p>
+							Oh and a
+							<a href="https://github.com/cajogos/seesaw" title="SEESAW JS - Always running web applications." target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+								JavaScript framework
+							</a> for always running web applications.
+						</p>
+						<p>
+							I often complain about my commute and life biggest questions
+							<a href="https://twitter.com/carlos_tweets" title="Follow Carlos Ferreira on Twitter." target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+								on my Twitter account
+							</a>.
+						</p>
+						<p>
+							I've been a Lead Mentor,
+							<a href="https://www.instagram.com/p/BL4GdOKh0z6/" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+								International Speaker
+							</a>, and Content Creator for
+							<a href="https://coderdojo.com" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+								CoderDojo
+							</a> since May 2013.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+						<div>
+							<h3 class="text-2xl font-light text-white mb-4">Things I like</h3>
+							<div class="space-y-2">
+								<p>Walking around and getting lost in London.</p>
+								<p>Attending coding and tech events.</p>
+								<p>Superhero Comics, Movies, TV Shows & <span title="Collectables?" class="text-cajogos-blue">Collectibles</span>.</p>
+								<p>Japanese culture, including Manga and Anime.</p>
+								<p>
+									<a href="https://www.last.fm/user/cajogos/listening-report/year" target="_blank" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+										This sort of music
+									</a>.
+								</p>
+								<p>Learning and teaching new stuff.</p>
+								<p>Solving the <a href="/rubiks-cube" class="text-cajogos-blue hover:text-white transition-colors duration-200">3x3 Rubik's Cube</a></p>
+								<p>I am a bit of a nerd :)</p>
+							</div>
+						</div>
+						<div>
+							<h3 class="text-2xl font-light text-white mb-4">Things I dislike</h3>
+							<div class="space-y-2">
+								<p>Spiders. The bigger kind.</p>
+								<p>Public Transportation.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 
 </Layout>

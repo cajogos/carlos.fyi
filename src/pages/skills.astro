@@ -1,27 +1,111 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-/*
-	public static function displaySkills()
-	{
-		$tpl = Template::create('pages/skills.tpl');
-		$tpl->assign('page_title', 'What I can do');
-		$tpl->assign('page_id', 'skills');
-		$tpl->assign('social_title', 'What I Can Do | Carlos Ferreira - All Things Developer from London');
-		$tpl->assign('social_desc', 'Name is Carlos and I like making things. Check out my website to know what I can do.');
-		$tpl->display();
-	}
-*/
 ---
 
-<Layout title="What I Can Do | Carlos Ferreira - All Things Developer from London">
+<Layout
+	title="What I Can Do | Carlos Ferreira - All Things Developer from London"
+	description="Name is Carlos and I like making things. Check out my website to know what I can do."
+	pageId="skills"
+>
 
-    <main class="container mx-auto p-4">
+	<main class="skills-page">
+		<h1 class="text-4xl md:text-5xl font-light text-white text-center mb-8">
+			<i class="fa fa-superpowers fa-spin text-global-orangered" style="text-shadow: 3px 3px 0 #EEE; font-weight: bold;"></i>
+			&nbsp;&nbsp;My Super Powers&nbsp;&nbsp;
+			<i class="fa fa-superpowers fa-spin text-global-orangered" style="text-shadow: 3px 3px 0 #EEE; font-weight: bold;"></i>
+		</h1>
+		<p class="text-center text-white text-lg mb-12">
+			Might sound like I have a bit of an ego... <del class="text-gray-400"><em>I do</em></del> But we can not deny that coding is the closest thing we have to superpowers!
+		</p>
 
-        <h1 class="text-2xl font-bold">TODO</h1>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="skill-title text-2xl font-light text-white mb-4">
+					<i class="fa fa-graduation-cap text-cajogos-blue mr-3"></i>Teach & Learn
+				</h2>
+				<div class="space-y-3 text-white">
+					<p>One thing I believe in is that you get better at what you do when you teach it.</p>
+					<p>This is why I have dedicated myself to teaching and mentoring. I was a lead mentor of CoderDojo in London for over 4 years.</p>
+					<p>I have also many years of experience in mentoring Computer Science to university students, which I find it helps me stay up-to-date with what is being taught, and gives me a chance to give my knowledge and experience to my mentees.</p>
+				</div>
+			</div>
 
-        <h1>Skills Page</h1>
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="skill-title text-2xl font-light text-white mb-4">
+					<i class="fa fa-microchip text-cajogos-blue mr-3"></i>Tech Savvy
+				</h2>
+				<div class="space-y-3 text-white">
+					<p>Although coding is my passion, I am knowledgeable of many aspects of Computer Science and I love technology!</p>
+					<p>
+						I like building PCs and fixing things. Feel free to
+						<a href="https://twitter.com/carlos_tweets" target="_blank" title="Also feel free to follow me on Twitter." class="text-cajogos-blue hover:text-white transition-colors duration-200">
+							tweet at me
+						</a> if you want some help.
+					</p>
+					<p>You will often find me reading newsletters and blogs about new tech and new discoveries related to computer science.</p>
+					<p>
+						I recommend you to subscribe to the
+						<a href="https://www.technologyreview.com/" target="_blank" title="Scroll down to the bottom of the page to subscribe to it." class="text-cajogos-blue hover:text-white transition-colors duration-200">
+							MIT's Technology Review Download
+						</a> - love reading it at lunch time!
+					</p>
+				</div>
+			</div>
 
-    </main>
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="skill-title text-2xl font-light text-white mb-4">
+					<i class="fa fa-bug text-cajogos-blue mr-3"></i>Bug Smasher
+				</h2>
+				<div class="space-y-3 text-white">
+					<p>What is that you saw? A bug? Let me get my tools, I will smash it!</p>
+					<p>I am not fond of any sort of bugs, but specially digital ones. I have experience in many ways of debugging problems in software and applications.</p>
+					<p>My favourite one has to be Chrome's developer tools, I can not live without it!</p>
+				</div>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="skill-title text-2xl font-light text-white mb-4">
+					<i class="fa fa-database text-cajogos-blue mr-3"></i>The Back-backend
+				</h2>
+				<div class="space-y-3 text-white">
+					<p>One of my favourite superpowers is what I like to call the back-backend.</p>
+					<p>I am already experienced in backend languages such as PHP, but I do love myself some server management too.</p>
+					<p>I have been managing web servers for over 10 years, all the way from ftp-only, cPanel managed and now to full Linux (mainly Debian based) virtual private servers. I usually go for a LEMP stack, but have played around with many other stacks - even including the MEAN stack.</p>
+					<p>
+						My choice of VPS provider has to be
+						<a href="https://m.do.co/c/67f4ef2abcdb" target="_blank" title="Use this link to get $10 when you sign-up! I will get $25 once you spend $25 - so win-win :)" class="text-cajogos-blue hover:text-white transition-colors duration-200">
+							Digital Ocean
+						</a>.
+					</p>
+				</div>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="skill-title text-2xl font-light text-white mb-4">
+					<i class="fa fa-tablet text-cajogos-blue mr-3"></i>Mobile Enthusiast
+				</h2>
+				<div class="space-y-3 text-white">
+					<p>One of my hobbies is mobile app development. Having published a few apps in the past.</p>
+					<p>The concept of a native app shines bright to me. Although, I am a Web Application Developer at heart I do consider the benefits of building a native mobile application to better gain use of these amazing devices we have in our pockets.</p>
+					<p>
+						I have a big interest for building new apps and playing around with the cameras and sensors of our tiny little friends we call smartphones, so if you have some cool app idea do
+						<a href="/contact" class="text-cajogos-blue hover:text-white transition-colors duration-200">let me know</a>.
+					</p>
+				</div>
+			</div>
+
+			<div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6">
+				<h2 class="skill-title text-2xl font-light text-white mb-4">
+					<i class="fa fa-sitemap text-cajogos-blue mr-3"></i>SEO
+				</h2>
+				<div class="space-y-3 text-white">
+					<p>Search Engine Optimization nowadays is the holy grail. I have been gaining knowledge on how to make sure my websites are found on that first page of the big G, doing some research on the Google Search API.</p>
+					<p>My main tools for this job are, of course, Google Analytics and the Google Search Console. These and as many other tools I need to better improve the ranking of my pages.</p>
+					<p>There is a reason as to how you ended up on this page.</p>
+				</div>
+			</div>
+		</div>
+	</main>
 
 </Layout>
